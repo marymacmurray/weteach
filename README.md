@@ -81,7 +81,7 @@ Testing:
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| TOTAL | --> | 40hrs|  | 
+| TOTAL | --> | 32hrs|  | 
 | Developing data model | H | 3hrs|  |
 | Build out API | H | 3hrs|  |
 | Developing data model | H | 3hrs|  |
