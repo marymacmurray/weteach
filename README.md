@@ -4,7 +4,7 @@
 we_teach is an app for online educators to teach and learn from one another.  Users create an account and can immediately start gleaning experiences and tips from one another about online teaching*.
 
 ## 1️⃣ Phase 1 MVP 
-*This is only phase 1 of a larger collaboration project with a group of NYC public school teachers to create multiple products with one purpose:  Creating, sharing, and iterating on our online pedagogical practices in NYC public schools within a supportive community of teachers and learners.
+*This is only phase 1 of a larger collaboration project with a group of teachers to create multiple products with one purpose:  Creating, sharing, and iterating on our online pedagogical practices within a supportive community of teachers and learners.
 
 ### Must have
 * User auth
