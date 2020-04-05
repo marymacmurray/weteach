@@ -6,19 +6,19 @@ we_teach is an app for online educators to teach and learn from one another.  Us
 ## 1️⃣ Phase 1 MVP 
 *This is only phase 1 of a larger collaboration project with a group of NYC public school teachers to create multiple products with one purpose:  Creating, sharing, and iterating on our online pedagogical practices in NYC public schools within a supportive community of teachers and learners.
 
-* Must have
- -- User auth
- -- Unified styling ([React Material UI](https://material-ui.com/getting-started/installation/ "material UI"))
- -- Full CRUD operation for the teaching resources table. 
- -- Read operations for the pedagogical categories table. 
+### Must have
+* User auth
+* Unified styling ([React Material UI](https://material-ui.com/getting-started/installation/ "material UI"))
+* Full CRUD operation for the teaching resources table. 
+* Read operations for the pedagogical categories table. 
 
 ## 🌟 Phase 1 Post-MVP
 
-* Should have 
-  -- Previews of resources
-* Could have
-  -- A first-time site visitor experience
-  -- Social media aspects similar to posts and likes
+### Should have 
+* Previews of resources
+### Could have
+* A first-time site visitor experience
+* Social media aspects similar to posts and likes
 
 ## Wireframes
 
@@ -80,7 +80,7 @@ Testing:
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
-| TOTAL | --> | 40hrs|  | 
+| TOTAL | --> | 32hrs|  | 
 | Developing data model | H | 3hrs|  |
 | Build out API | H | 3hrs|  |
 | Developing data model | H | 3hrs|  |
@@ -149,19 +149,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-#### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-
-#### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
