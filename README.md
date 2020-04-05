@@ -41,7 +41,6 @@ App.js
 <img src="planning/we_teach_ERD.jpg">
 
 
-
 ### 📦 Technologies used:
 
 FrontEnd:
