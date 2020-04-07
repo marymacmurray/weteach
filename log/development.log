@@ -179,3 +179,81 @@ Migrating to AddNameToResources (20200407191028)
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(184450757901528405)[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (12.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Environment"], ["created_at", "2020-04-07 19:49:09.040571"], ["updated_at", "2020-04-07 19:49:09.040571"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Check for Understanding"], ["created_at", "2020-04-07 19:49:09.057528"], ["updated_at", "2020-04-07 19:49:09.057528"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Formative Assessment"], ["created_at", "2020-04-07 19:49:09.061544"], ["updated_at", "2020-04-07 19:49:09.061544"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Summative Assessment"], ["created_at", "2020-04-07 19:49:09.065160"], ["updated_at", "2020-04-07 19:49:09.065160"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Group Work"], ["created_at", "2020-04-07 19:49:09.068624"], ["updated_at", "2020-04-07 19:49:09.068624"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory::HABTM_Resources Destroy (19.5ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."category_id" = $1[0m  [["category_id", 1]]
+  [1m[36mCategory Destroy (0.4ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory::HABTM_Resources Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."category_id" = $1[0m  [["category_id", 2]]
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 2]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory::HABTM_Resources Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."category_id" = $1[0m  [["category_id", 3]]
+  [1m[36mCategory Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory::HABTM_Resources Destroy (0.3ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."category_id" = $1[0m  [["category_id", 4]]
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory::HABTM_Resources Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."category_id" = $1[0m  [["category_id", 5]]
+  [1m[36mCategory Destroy (0.2ms)[0m  [1m[31mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Environment"], ["created_at", "2020-04-07 19:50:08.731357"], ["updated_at", "2020-04-07 19:50:08.731357"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Check for Understanding"], ["created_at", "2020-04-07 19:50:08.735687"], ["updated_at", "2020-04-07 19:50:08.735687"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Formative Assessment"], ["created_at", "2020-04-07 19:50:08.739393"], ["updated_at", "2020-04-07 19:50:08.739393"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Summative Assessment"], ["created_at", "2020-04-07 19:50:08.742991"], ["updated_at", "2020-04-07 19:50:08.742991"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Group Work"], ["created_at", "2020-04-07 19:50:08.746571"], ["updated_at", "2020-04-07 19:50:08.746571"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mResource Create (1.0ms)[0m  [1m[32mINSERT INTO "resources" ("user_id", "link", "description", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 2], ["link", "https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4"], ["description", "Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."], ["created_at", "2020-04-07 19:50:08.784746"], ["updated_at", "2020-04-07 19:50:08.784746"], ["name", "Creating Zoom breakout rooms"]]
+  [1m[36mResource::HABTM_Categories Create (0.4ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 1], ["category_id", 6]]
+  [1m[36mResource::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 1], ["category_id", 10]]
+  [1m[36mResource::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 1], ["category_id", 7]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResource Create (0.3ms)[0m  [1m[32mINSERT INTO "resources" ("user_id", "link", "description", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["link", "https://youtu.be/KlV01IHAovw"], ["description", "Add a google form to your drive and use it as a quiz."], ["created_at", "2020-04-07 19:50:08.803952"], ["updated_at", "2020-04-07 19:50:08.803952"], ["name", "Using Google Classroom Forms for Quizzes"]]
+  [1m[36mResource::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 2], ["category_id", 7]]
+  [1m[36mResource::HABTM_Categories Create (0.3ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 2], ["category_id", 8]]
+  [1m[36mResource::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 2], ["category_id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mResource Create (0.5ms)[0m  [1m[32mINSERT INTO "resources" ("user_id", "link", "description", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["link", "https://youtu.be/ocTFLh46fgE"], ["description", "Go through all the settings in zoom with the pros and cons of each in less than 23 minutes."], ["created_at", "2020-04-07 19:50:08.816168"], ["updated_at", "2020-04-07 19:50:08.816168"], ["name", "Setting up your Zoom classroom"]]
+  [1m[36mResource::HABTM_Categories Create (0.2ms)[0m  [1m[32mINSERT INTO "categories_resources" ("resource_id", "category_id") VALUES ($1, $2)[0m  [["resource_id", 3], ["category_id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "resources"[0m
