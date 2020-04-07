@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has many :resources
   has_secure_password
 
   validates :username, presence: true, uniqueness: true
