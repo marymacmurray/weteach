@@ -19730,3 +19730,87 @@ Processing by ResourcesController#index as HTML
 Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 2422)
 
 
+Started GET "/resources" for ::1 at 2020-04-10 17:56:42 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:56:42 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:56:42 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Processing by ResourcesController#index as HTML
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (8.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 12.6ms | Allocations: 13235)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 35.7ms | ActiveRecord: 8.3ms | Allocations: 12416)
+
+
+  [1m[36mResource Load (24.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 69ms (Views: 39.5ms | ActiveRecord: 24.7ms | Allocations: 16740)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:56:44 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:56:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:56:44 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 2881)
+
+
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 3.4ms | Allocations: 1709)
+
+
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 16.4ms | Allocations: 2502)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:56:46 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:56:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:56:46 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 2.0ms | Allocations: 3596)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 2.6ms | Allocations: 4043)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 10.6ms | Allocations: 4247)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:56:48 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:56:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:56:48 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (20.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 6.3ms | ActiveRecord: 20.2ms | Allocations: 2006)
+
+
+  [1m[36mUser Load (34.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 34.0ms | Allocations: 2268)
+
+
+  [1m[36mResource Load (46.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 58ms (Views: 11.6ms | ActiveRecord: 46.2ms | Allocations: 5378)
+
+
