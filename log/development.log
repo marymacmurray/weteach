@@ -16766,3 +16766,45 @@ Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 9.5ms | Allocations: 4014
 Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 22.7ms | Allocations: 4727)
 
 
+Started GET "/resources" for ::1 at 2020-04-10 15:24:18 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:24:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:24:18 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (9.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (23.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 30.7ms | ActiveRecord: 9.7ms | Allocations: 13760)
+
+
+Completed 200 OK in 63ms (Views: 0.2ms | ActiveRecord: 24.5ms | Allocations: 15126)
+
+
+Completed 200 OK in 62ms (Views: 55.0ms | ActiveRecord: 1.6ms | Allocations: 16286)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:27:30 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 2.3ms | Allocations: 2276)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 15:27:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:27:30 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 813)
+
+
+  [1m[36mCategory Load (12.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 12.3ms | Allocations: 2795)
+
+
