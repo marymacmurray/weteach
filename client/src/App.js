@@ -51,6 +51,11 @@ class App extends React.Component {
     })
     this.props.history.push(`/resources/${id}`)
   }
+
+  deleteResource = async () => {
+    await this.getResources()
+    this.props.history.push('/')
+  }
   // ====================================
   // ============= Categories ==============
   // ====================================
@@ -73,7 +78,9 @@ class App extends React.Component {
           <Route exact path='/' render={(props) => (
             <Home
               {...props}
+              deleteResource={this.deleteResource}
               setResource={this.setResource}
+              getResources={this.getResources}
               user={this.state.currentUser}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (

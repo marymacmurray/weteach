@@ -33,7 +33,7 @@ export default function CreateResource(props) {
   return (
     <>
       <div className="createform">
-      <h1>Add a new resource</h1>
+      <h1>add</h1>
       <form className={classes.root} noValidate autoComplete="off"
         onSubmit={(event) => {
           event.preventDefault();

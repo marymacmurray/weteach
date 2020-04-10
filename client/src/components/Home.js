@@ -1,31 +1,16 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom"
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import {destroyResource} from '../services/api-helper'
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -48,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   cardMedia: {
+    height: 140,
     paddingTop: '56.25%', // 16:9
   },
   cardContent: {
@@ -88,7 +74,7 @@ export default function Home(props) {
                 </Grid>
                 <Grid item>
                   <Button component={Link} to="/resources" variant="outlined" color="primary">
-                    View Resources
+                    Add Resources
                   </Button>
                 </Grid>
               </Grid>
@@ -102,9 +88,10 @@ export default function Home(props) {
               <Grid item key={resource.id} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia
+                    component="img"
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
                     title={resource.name}
+                    src={resource.image}
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -115,9 +102,16 @@ export default function Home(props) {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary" target="_blank" href={`${resource.link}`}>View</Button>
+                    <Button size="small" color="primary" target="_blank" href={`${resource.link}`}>Go</Button>
                     <Button onClick={()=>{props.setResource(resource.id)}} size="small" color="primary" >
                       Edit
+                    </Button>
+                    <Button onClick={() => {
+                      props.setResource(resource.id)
+                      destroyResource(resource.id)
+                      props.deleteResource()
+                    }} size="small" color="primary" >
+                      Delete
                     </Button>
                   </CardActions>
                 </Card>

@@ -25,8 +25,6 @@ export default function EditResource(props) {
   const classes = useStyles()
 
 
-  // props.setEdit(props.match.params.id)
-
   return (
     
     <>  
@@ -52,45 +50,3 @@ export default function EditResource(props) {
     </>
   );
 }
-
-// import React from 'react'
-
-// export default function CatsCreate(props) {
-//   return (
-//     <div>
-//       <form onSubmit={(e) => {
-//         e.preventDefault();
-//         props.createSubmit();
-//       }}>
-//         <label htmlFor="name">name</label>
-//         <input
-//           type="text"
-//           name="name"
-//           id="name"
-//           value={props.formData.name}
-//           onChange={props.handleChange}
-//         />
-//         <br />
-//         <label htmlFor="link">link</label>
-//         <input
-//           type="text"
-//           name="link"
-//           id="link"
-//           value={props.formData.link}
-//           onChange={props.handleChange}
-//         />
-//         <br />
-//         <label htmlFor="description">description</label>
-//         <input
-//           type="text"
-//           name="description"
-//           id="description"
-//           value={props.formData.description}
-//           onChange={props.handleChange}
-//         />
-//         <br />
-//         <button>Submit</button>
-//       </form>
-//     </div>
-//   )
-// }
