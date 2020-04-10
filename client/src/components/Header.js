@@ -55,7 +55,7 @@ export default function ButtonAppBar(props) {
             <MenuItem component={Link} to="/resources">Resources</MenuItem>
           </Menu>
           <Typography variant="h6" className={classes.title}>
-          {props.user ? <h5>Welcome, {props.user.username}</h5> : <h5>We Teach</h5>}
+          {props.user ? <span>Welcome, {props.user.username}</span> : <span>We Teach</span>}
           </Typography>
           <Typography variant="inherit">
           </Typography>

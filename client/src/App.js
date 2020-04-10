@@ -3,11 +3,13 @@ import { Route, withRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout'
 
-import { readAllResources, readAllCategories, verifyUser, createResource } from './services/api-helper';
+import { readAllResources, readAllCategories, verifyUser, readOneResource } from './services/api-helper';
 import ResourcesIndex from './components/ResourcesIndex';
 import CategoriesIndex from './components/CategoriesIndex';
 import Signup from './components/Signup'
 import Home from './components/Home'
+import SignIn from './components/SignIn';
+import EditResource from './components/EditResource'
 // import EnsureLoggedInContainer from './components/EnsureLoggedInContainer'
 
 
@@ -37,6 +39,10 @@ class App extends React.Component {
     this.setState({ resources });
   }
 
+  getOneResource = async (id) => {
+    const resource = await readOneResource(id);
+    this.setState({ resource });
+  }
 
   // ====================================
   // ============= Categories ==============
@@ -63,16 +69,31 @@ class App extends React.Component {
               user={this.state.currentUser}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (
-            <Signup {...props} setUser={this.setUser} />
+            !this.state.currentUser ? 
+              (<Signup {...props} setUser={this.setUser} />) :
+            (<SignIn {...props} setUser={this.setUser} />)
           )} />
-          <Route path='/resources' render={() => (
+          <Route exact path='/resources/:id' render={(props) => (
+            <EditResource
+              {...props}
+              getOneResource={this.getOneResource}
+              getResources={this.getResources}
+              user={this.state.currentUser}
+            />
+          )}/>
+          <Route exact path='/resources' render={(props) => (
             <ResourcesIndex
+              {...props}
+              getResources={this.getResources}
+              user={this.state.currentUser}
               resources={this.state.resources}
             />
           )}
           />
-          <Route path='/categories' render={() => (
+          <Route path='/categories' render={(props) => (
             <CategoriesIndex
+              {...props}
+              user={this.state.currentUser}
               categories={this.state.categories}
             />
           )}

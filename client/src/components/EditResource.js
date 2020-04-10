@@ -4,6 +4,9 @@ import TextField from '@material-ui/core/TextField';
 // import { Redirect } from "react-router-dom";
 import { browserHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
+import { Redirect } from 'react-router-dom'
+import CreateResource from '../components/CreateResource'
+import { readOneResouce, updateResource } from '../services/api-helper'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,31 +17,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CreateResource(props) {
+export default function EditResource(props) {
   const classes = useStyles()
 
-  // const onSubmit = event => {
-  //   event.preventDefault()
-  //   console.log('post new resource.')
-  // }
 
-  // const handleChange = event => {
-  //   this.setState({
-  //     [event.target.label]: event.target.value,
-  //     // isError: false,
-  //     // errorMsg: ''
-  //   })
-  // }
+  
 
   return (
-    <>
-
+    
+    <>  
       <form className={classes.root} noValidate autoComplete="off"
         onSubmit={(event) => {
           event.preventDefault();
           props.createSubmit();
         }}>
-      <TextField id="outlined-basic" label="link" name="link" variant="outlined" onChange={props.handleChange} />
+      getResource()
+        <TextField id="outlined-basic" label="link" name="link" variant="outlined" onChange={props.handleChange} />
           <br></br>  
         <TextField id="outlined-basic" label="title" name="name" variant="outlined" onChange={props.handleChange} />
           <br></br>

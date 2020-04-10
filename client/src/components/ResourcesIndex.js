@@ -23,13 +23,16 @@ class ResourcesIndex extends React.Component {
   }
 
   createSubmit = async () => {
-    const newResource = await createResource(this.state.formData);
-    this.setState(prevState => ({
-      resources: [
-        ...prevState.resources,
-        newResource
-      ]
-    }));
+    const user_id = this.props.user.id
+    await createResource(this.state.formData, user_id);
+    await this.props.getResources()
+    // const newResource = this.state.formData
+    // this.setState(prevState => ({
+    //   resources: [
+    //     ...prevState.resources,  //not iterable?  also, don't care about state here, need it in App.
+    //     newResource
+    //   ]
+    // }));
     this.props.history.push('/resources');
   }
 
@@ -38,6 +41,7 @@ class ResourcesIndex extends React.Component {
       <div className="createform">
         <h1>Add a new resource</h1>
         <CreateResource
+          user={this.props.user}
           formData={this.state.formData}
           handleChange={this.handleChange}
           createSubmit={this.createSubmit} />

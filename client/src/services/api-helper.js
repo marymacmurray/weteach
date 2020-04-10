@@ -60,8 +60,10 @@ export const readOneResource = async (id) => {
   return resp.data;
 }
 
-export const createResource = async (resourceData) => {
-  const resp = await api.post('/resources', {resource: resourceData});
+export const createResource = async (resourceData, id) => {
+  const formdata = resourceData
+  formdata.user_id = id
+  const resp = await api.post('/resources', {resource: formdata});
   return resp.data;
 }
 
