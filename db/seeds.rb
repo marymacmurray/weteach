@@ -9,6 +9,10 @@
 Category.destroy_all
 Resource.destroy_all
 
+User.create!(username: 'testuser1',email:"test1@gmail.com",password:"Password1!")
+User.create!(username: 'testuser2',email:"test2@gmail.com",password:"Password1!")
+
+
 env = Category.create!(name:"Environment")
 check = Category.create!(name:"Check for Understanding")
 formative = Category.create!(name:"Formative Assessment")
