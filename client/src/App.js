@@ -1,26 +1,35 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, withRouter } from 'react-router-dom';
 import './App.css';
+import Layout from './components/Layout'
 
-import { readAllResources, readAllCategories } from './services/api-helper';
+import { readAllResources, readAllCategories, verifyUser, createResource } from './services/api-helper';
 import ResourcesIndex from './components/ResourcesIndex';
 import CategoriesIndex from './components/CategoriesIndex';
 import Signup from './components/Signup'
+import Home from './components/Home'
+// import EnsureLoggedInContainer from './components/EnsureLoggedInContainer'
 
 
 class App extends React.Component {
   state = {
+    user: null,
     resources: [],
-    categories: []
+    categories: [],
+
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.getResources();
-    this.getCategories()
+    this.getCategories();
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({ currentUser })
+    }
   }
 
   // ====================================
-  // ============= Foods ================
+  // ============= Resources ================
   // ====================================
 
   getResources = async () => {
@@ -28,8 +37,9 @@ class App extends React.Component {
     this.setState({ resources });
   }
 
+
   // ====================================
-  // ============= Flavors ==============
+  // ============= Categories ==============
   // ====================================
 
   getCategories = async () => {
@@ -38,31 +48,40 @@ class App extends React.Component {
   }
 
   setUser = user => this.setState({ user });
-
+  clearUser = () => this.setState({ user: null });
   // ====================================
   // ============= Render ===============
   // ====================================
 
   render() {
     return (
-      <div className="App">
-        <h1>Main page text here</h1>
-        <Route path='/auth/login' render={() => (
-          <Signup setUser={this.setUser}/>
-        )}/>
-        <Route path='/resources' render={() => (
-          <ResourcesIndex
-            resources={this.state.resources}
+      <Layout user={this.state.currentUser}>
+        <div>
+          <Route exact path='/' render={(props) => (
+            <Home
+              {...props}
+              user={this.state.currentUser}
+              resources={this.state.resources} />)}/>
+          <Route path='/auth/login' render={(props) => (
+            <Signup {...props} setUser={this.setUser} />
+          )} />
+          <Route path='/resources' render={() => (
+            <ResourcesIndex
+              resources={this.state.resources}
+            />
+          )}
           />
-        )} />
-        <Route path='/categories' render={() => (
-          <CategoriesIndex
-            categories={this.state.categories}
+          <Route path='/categories' render={() => (
+            <CategoriesIndex
+              categories={this.state.categories}
+            />
+          )}
           />
-        )} />
-      </div>
+          {/* <Route path='/categories/:category_id/resources/:id' component={AddCategorytoResource}/> */}
+        </div>
+      </Layout>
     );
   }
 }
 
-export default App;
+export default withRouter(App);

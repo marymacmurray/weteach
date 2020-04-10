@@ -1,10 +1,12 @@
 import React from 'react'
-import { registerUser, loginUser } from '../services/api-helper'
+import { registerUser, loginUser, verifyUser } from '../services/api-helper'
+// import { Link } from '@material-ui/core'
+import SignIn from '../SignIn'
+
 
 class SignUp extends React.Component {
   constructor() {
     super()
-
     this.state = {
       username: '',
       email: '',
@@ -19,23 +21,20 @@ class SignUp extends React.Component {
       // errorMsg: ''
     })
 
-  onSignUp = event => {
+  onSignUp = async (event) => {
     event.preventDefault()
 
-    const { history, setUser } = this.props
-
-    registerUser(this.state)
-      .then(() => loginUser(this.state))
-      .then(res => setUser(res.user)) //set the user in App.js
-      .then(() => history.push('/'))
-      .catch(error => {
+    const { setUser, history } = this.props
+    try
+    {
+    await registerUser(this.state)
+    const user = await loginUser(this.state)
+    await setUser(user)  //set the user in App.js
+    await history.push('/')
+    }
+      catch(error){
         console.error(error)
-        this.setState({
-          username: '',
-          email: '',
-          password: ''
-        })
-      })
+      }
   }
 
   // renderError = () => {
@@ -55,10 +54,11 @@ class SignUp extends React.Component {
     const { email, username, password } = this.state
 
     return (
-        <div className="form-container">
-          <h3>Sign Up</h3>
-          <form onSubmit={this.onSignUp}>
-            <label>Username</label>
+      <div className="signup">
+        <h2>Sign Up</h2>
+        <form className="signupform" onSubmit={this.onSignUp}>
+          <label>Username</label>
+          <div>
             <input
               required
               type="text"
@@ -67,7 +67,10 @@ class SignUp extends React.Component {
               placeholder="enter username"
               onChange={this.handleChange}
             />
-            <label>Email address</label>
+          </div>
+          <br />
+          <label>Email address</label>
+          <div>
             <input
               required
               type="email"
@@ -76,7 +79,10 @@ class SignUp extends React.Component {
               placeholder="enter email"
               onChange={this.handleChange}
             />
-            <label>Password</label>
+          </div>
+          <br />
+          <label>Password</label>
+          <div>
             <input
               required
               name="password"
@@ -85,10 +91,12 @@ class SignUp extends React.Component {
               placeholder="password"
               onChange={this.handleChange}
             />
-            <button type="submit">Sign In</button>
-            {/* {this.renderError()} */}
-          </form>
-        </div>
+          </div>
+          <br />
+          <button type="submit">Sign In</button>
+          {/* {this.renderError()} */}
+        </form>
+      </div>
     )
   }
 }
