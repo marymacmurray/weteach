@@ -8,6 +8,8 @@ import { Redirect } from 'react-router-dom'
 import CreateResource from '../components/CreateResource'
 import { readOneResouce, updateResource } from '../services/api-helper'
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
@@ -17,11 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 export default function EditResource(props) {
   const classes = useStyles()
 
 
-  
+  // props.setEdit(props.match.params.id)
 
   return (
     
@@ -31,12 +35,12 @@ export default function EditResource(props) {
           event.preventDefault();
           props.createSubmit();
         }}>
-      getResource()
-        <TextField id="outlined-basic" label="link" name="link" variant="outlined" onChange={props.handleChange} />
+          <h1>some text</h1>
+        <TextField id="outlined-basic" label="link" name="link" value={props.formData.link} variant="outlined" onChange={props.handleChange} />
           <br></br>  
-        <TextField id="outlined-basic" label="title" name="name" variant="outlined" onChange={props.handleChange} />
+        <TextField id="outlined-basic" label="title" name="name" value={props.formData.name} variant="outlined" onChange={props.handleChange} />
           <br></br>
-        <TextField id="outlined-basic" label="description" name="description" variant="outlined" onChange={props.handleChange}/>
+        <TextField id="outlined-basic" label="description" name="description" value={props.formData.description} variant="outlined" onChange={props.handleChange}/>
           <br></br>  
         <Button
           variant="contained"

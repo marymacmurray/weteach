@@ -32,7 +32,8 @@ export default function CreateResource(props) {
 
   return (
     <>
-
+      <div className="createform">
+      <h1>Add a new resource</h1>
       <form className={classes.root} noValidate autoComplete="off"
         onSubmit={(event) => {
           event.preventDefault();
@@ -50,7 +51,8 @@ export default function CreateResource(props) {
           type="submit"
           label="Save"
         >Submit</Button>
-      </form>
+        </form>
+        </div>
     </>
   );
 }

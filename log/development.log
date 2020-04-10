@@ -16808,3 +16808,2925 @@ Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 813)
 Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 12.3ms | Allocations: 2795)
 
 
+Started GET "/" for ::1 at 2020-04-10 15:39:41 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macbook/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macbook/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.7ms | Allocations: 309)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 1613)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-04-10 15:39:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2020-04-10 15:39:49 -0400
+Started GET "/resources" for ::1 at 2020-04-10 15:39:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:39:49 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.9ms | Allocations: 1361)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (3.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 5.8ms | ActiveRecord: 3.9ms | Allocations: 2525)
+
+
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 9.9ms | Allocations: 3517)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:47:44 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:47:44 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:47:44 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (5.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 3.2ms | Allocations: 3582)
+
+
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 5.7ms | Allocations: 4404)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 7.8ms | Allocations: 1782)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:52:04 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:52:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:52:04 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 3.5ms | Allocations: 1691)
+
+
+  [1m[36mResource Load (10.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 10.3ms | Allocations: 4442)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 4727)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:52:29 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:52:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:52:29 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.6ms | Allocations: 2279)
+
+
+  [1m[36mCategory Load (49.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 55ms (Views: 4.9ms | ActiveRecord: 49.4ms | Allocations: 4688)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 1060)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:52:36 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:52:36 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:52:36 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (8.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (7.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 8.8ms | Allocations: 3023)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.9ms | Allocations: 3654)
+
+
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 7.9ms | Allocations: 4409)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:52:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:52:58 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:52:58 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 1672)
+
+
+  [1m[36mCategory Load (4.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 4.9ms | Allocations: 2800)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 1.0ms | Allocations: 4754)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:53:01 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:53:01 -0400
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:53:01 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.4ms | Allocations: 2545)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 4338)
+
+
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 6.4ms | Allocations: 2845)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:53:07 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:53:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:53:07 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.8ms | Allocations: 3420)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 2.2ms | Allocations: 3879)
+
+
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 5.9ms | Allocations: 4071)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:53:28 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:53:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:53:28 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 1037)
+
+
+  [1m[36mResource Load (4.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 4.6ms | Allocations: 3299)
+
+
+  [1m[36mCategory Load (8.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 8.8ms | Allocations: 4642)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:54:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 15:54:50 -0400
+Started GET "/categories" for ::1 at 2020-04-10 15:54:50 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 2585)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 5.3ms | Allocations: 3847)
+
+
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.6ms | Allocations: 4592)
+
+
+Started POST "/resources" for ::1 at 2020-04-10 15:59:14 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"resource"=>{"name"=>"ffff", "link"=>"sdfsdfd", "description"=>"dddd", "user_id"=>31}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mResource Create (1.2ms)[0m  [1m[32mINSERT INTO "resources" ("user_id", "link", "description", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 31], ["link", "sdfsdfd"], ["description", "dddd"], ["created_at", "2020-04-10 19:59:14.122207"], ["updated_at", "2020-04-10 19:59:14.122207"], ["name", "ffff"]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+Completed 201 Created in 15ms (Views: 0.7ms | ActiveRecord: 3.2ms | Allocations: 4913)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 15:59:14 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 2422)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:05:36 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:05:36 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:05:36 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.6ms | Allocations: 1671)
+
+
+  [1m[36mResource Load (4.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 4.7ms | Allocations: 4230)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 3.4ms | Allocations: 5040)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:05:38 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:05:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:05:38 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (5.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 5.8ms | Allocations: 2713)
+
+
+  [1m[36mCategory Load (146.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 150ms (Views: 3.1ms | ActiveRecord: 146.2ms | Allocations: 4048)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 173ms (Views: 0.4ms | ActiveRecord: 168.2ms | Allocations: 4873)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:05:53 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:05:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:05:53 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1469)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 2268)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.5ms | Allocations: 2422)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:07:09 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:07:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:07:09 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (6.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (14.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.5ms | Allocations: 3068)
+
+
+Completed 200 OK in 20ms (Views: 5.8ms | ActiveRecord: 14.0ms | Allocations: 4208)
+
+
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 17.2ms | Allocations: 5941)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:07:46 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:07:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:07:46 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 2.1ms | Allocations: 3195)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 2.0ms | Allocations: 4475)
+
+
+  [1m[36mUser Load (28.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 31ms (Views: 0.5ms | ActiveRecord: 28.5ms | Allocations: 2475)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:07:55 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-10 16:07:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:07:55 -0400
+  [1m[36mResource Load (4.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 4.4ms | Allocations: 2572)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 2.1ms | Allocations: 1729)
+
+
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 13.4ms | Allocations: 1028)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:08:02 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:08:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:08:02 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.8ms | Allocations: 3319)
+
+
+  [1m[36mCategory Load (6.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 6.7ms | Allocations: 4468)
+
+
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 6.5ms | Allocations: 4598)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:24:38 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:24:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:24:38 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (13.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 5.6ms | ActiveRecord: 13.4ms | Allocations: 3205)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (3.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 5.6ms | Allocations: 4832)
+
+
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 3.9ms | Allocations: 3249)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 16:25:05 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:25:05 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:25:05 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (3.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.7ms | Allocations: 2233)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 3.1ms | Allocations: 4318)
+
+
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 4744)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:35:00 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:35:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:35:00 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (8.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 4.1ms | ActiveRecord: 8.3ms | Allocations: 3932)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 2.1ms | Allocations: 4233)
+
+
+Completed 200 OK in 18ms (Views: 0.4ms | ActiveRecord: 7.4ms | Allocations: 5503)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:35:10 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:35:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:35:10 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.1ms | Allocations: 1497)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 2.8ms | Allocations: 4120)
+
+
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 15.0ms | Allocations: 4873)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:35:27 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:35:27 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:35:27 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 3004)
+
+
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.5ms | Allocations: 4481)
+
+
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.7ms | Allocations: 1671)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 16:36:07 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:36:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:36:07 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 2432)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 813)
+
+
+  [1m[36mCategory Load (5.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 5.2ms | Allocations: 2795)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:36:40 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:36:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:36:40 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 2.6ms | Allocations: 3590)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 4329)
+
+
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 1.9ms | Allocations: 4516)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:12 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:12 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:12 -0400
+  [1m[36mResource Load (3.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 3.6ms | Allocations: 3836)
+
+
+  [1m[36mCategory Load (4.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 18.2ms | ActiveRecord: 4.6ms | Allocations: 3965)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:19 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:19 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:19 -0400
+  [1m[36mResource Load (5.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 5.2ms | Allocations: 4198)
+
+
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 2.0ms | Allocations: 1159)
+
+
+  [1m[36mCategory Load (2.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 2.9ms | Allocations: 2430)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:20 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:20 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:20 -0400
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.6ms | Allocations: 3153)
+
+
+  [1m[36mCategory Load (29.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 3.1ms | ActiveRecord: 29.7ms | Allocations: 1687)
+
+
+  [1m[36mUser Load (38.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 38.0ms | Allocations: 2483)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:22 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:22 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.9ms | Allocations: 2843)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (7.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 7.9ms | Allocations: 2552)
+
+
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 2053)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:32 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:32 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 2961)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 4127)
+
+
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.1ms | Allocations: 4545)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:37:38 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:37:38 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:37:38 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mResource Load (4.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 2187)
+
+
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 4.5ms | Allocations: 2438)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 4.6ms | Allocations: 4788)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:39:02 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:39:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:39:02 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 3188)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (6.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 6.5ms | Allocations: 4445)
+
+
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 7.7ms | Allocations: 2241)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:39:30 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:39:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:39:30 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 2184)
+
+
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.8ms | Allocations: 3747)
+
+
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 3.3ms | Allocations: 4641)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:40:01 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:40:01 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:40:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (11.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 5.0ms | ActiveRecord: 11.1ms | Allocations: 3279)
+
+
+  [1m[36mCategory Load (17.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 3.8ms | ActiveRecord: 17.9ms | Allocations: 5928)
+
+
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 5.2ms | Allocations: 4605)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:40:06 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:40:06 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:40:06 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (6.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 4.2ms | ActiveRecord: 6.6ms | Allocations: 2963)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (13.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 4.0ms | ActiveRecord: 13.3ms | Allocations: 4467)
+
+
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 10.0ms | Allocations: 2247)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:40:24 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:40:24 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:40:24 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (1.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 1576)
+
+
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 1.7ms | Allocations: 3409)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.5ms | Allocations: 4788)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:40:41 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:40:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:40:41 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.0ms | Allocations: 3161)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 3952)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 3.4ms | Allocations: 4071)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:40:57 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:40:57 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:40:57 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3918)
+
+
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 4339)
+
+
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.6ms | Allocations: 3381)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:42:20 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:42:20 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:42:20 -0400
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.4ms | Allocations: 3589)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1475)
+
+
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 2268)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 16:42:23 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:42:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:42:23 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (19.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 6.9ms | ActiveRecord: 19.2ms | Allocations: 2961)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (46.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 52ms (Views: 4.8ms | ActiveRecord: 46.8ms | Allocations: 4910)
+
+
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2053)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:44:02 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:44:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:44:02 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 2.5ms | Allocations: 3813)
+
+
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.9ms | Allocations: 4090)
+
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.7ms | Allocations: 1028)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:44:12 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:44:12 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:44:12 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (3.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (2.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 3.9ms | Allocations: 4623)
+
+
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 2.2ms | Allocations: 4474)
+
+
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4388)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:44:30 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:44:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:44:30 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (3.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.5ms | Allocations: 3396)
+
+
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 3.8ms | Allocations: 3612)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 2475)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:44:43 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:44:43 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:44:43 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mResource Load (8.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 851)
+
+
+Completed 200 OK in 17ms (Views: 8.4ms | ActiveRecord: 8.5ms | Allocations: 4255)
+
+
+  [1m[36mCategory Load (8.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 8.7ms | Allocations: 3468)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:45:38 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:45:38 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:45:38 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 1543)
+
+
+  [1m[36mResource Load (4.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 4.1ms | Allocations: 3416)
+
+
+  [1m[36mCategory Load (28.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 3.4ms | ActiveRecord: 28.2ms | Allocations: 4294)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:45:51 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:45:51 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:45:51 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by ResourcesController#index as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.1ms | Allocations: 2258)
+
+
+  [1m[36mResource Load (2.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 2.7ms | Allocations: 3413)
+
+
+  [1m[36mUser Load (20.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 20.6ms | Allocations: 3598)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:47:29 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:47:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:47:29 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (5.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 5.3ms | Allocations: 3022)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 7.3ms | Allocations: 3903)
+
+
+  [1m[36mCategory Load (23.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 83ms (Views: 58.8ms | ActiveRecord: 23.5ms | Allocations: 2180)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:47:32 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:47:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:47:32 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (93.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 100ms (Views: 6.0ms | ActiveRecord: 93.2ms | Allocations: 2973)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 24.2ms | Allocations: 813)
+
+
+  [1m[36mCategory Load (82.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 87ms (Views: 4.1ms | ActiveRecord: 82.6ms | Allocations: 5381)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 16:48:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:48:58 -0400
+Started GET "/resources" for ::1 at 2020-04-10 16:48:58 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.0ms | Allocations: 1304)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 1342)
+
+
+  [1m[36mResource Load (5.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 38.9ms | ActiveRecord: 5.7ms | Allocations: 3297)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:50:13 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:50:13 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:50:13 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.7ms | Allocations: 2422)
+
+
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (11.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 11.8ms | Allocations: 1304)
+
+
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 21.7ms | Allocations: 2807)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:56:32 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:56:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:56:32 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (7.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 7.0ms | Allocations: 4348)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (5.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 5.0ms | Allocations: 1413)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 7.4ms | Allocations: 6858)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:56:46 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:56:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:56:46 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (4.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 4.1ms | Allocations: 1914)
+
+
+  [1m[36mResource Load (9.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 8.6ms | ActiveRecord: 9.3ms | Allocations: 5040)
+
+
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 16.0ms | Allocations: 4873)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:57:16 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:57:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:57:16 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (6.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.7ms | ActiveRecord: 6.2ms | Allocations: 4226)
+
+
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.9ms | Allocations: 3859)
+
+
+  [1m[36mUser Load (9.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 9.6ms | Allocations: 4871)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:57:20 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:57:20 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:57:20 -0400
+  [1m[36mResource Load (6.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 6.4ms | Allocations: 3885)
+
+
+  [1m[36mCategory Load (6.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 13.3ms | ActiveRecord: 6.8ms | Allocations: 4553)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:58:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:58:26 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:58:26 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 3306)
+
+
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 1.2ms | Allocations: 3170)
+
+
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.3ms | Allocations: 4359)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:58:49 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:58:49 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:58:49 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.5ms | Allocations: 2557)
+
+
+  [1m[36mCategory Load (6.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 6.8ms | Allocations: 4481)
+
+
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 6.1ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:58:50 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:58:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:58:50 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.4ms | Allocations: 2726)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.1ms | Allocations: 3877)
+
+
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 10.4ms | Allocations: 4953)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:58:55 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:58:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:58:55 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 3.1ms | Allocations: 3990)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.4ms | Allocations: 4105)
+
+
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 4743)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:58:56 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:58:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:58:56 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms | Allocations: 3405)
+
+
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 3.1ms | Allocations: 3857)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 2475)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:00 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:00 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:00 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 3374)
+
+
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.9ms | Allocations: 3868)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4841)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:08 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:08 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:08 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1750)
+
+
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.7ms | Allocations: 2712)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 2.0ms | Allocations: 4732)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:40 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:40 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (2.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 2.1ms | Allocations: 2348)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Processing by ResourcesController#index as HTML
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2686)
+
+
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 2656)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:47 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:47 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.5ms | Allocations: 2844)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (81.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (63.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 3.2ms | ActiveRecord: 81.3ms | Allocations: 2145)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 82ms (Views: 0.4ms | ActiveRecord: 63.8ms | Allocations: 2268)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:48 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:48 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.9ms | Allocations: 2977)
+
+
+  [1m[36mCategory Load (5.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 5.0ms | Allocations: 4302)
+
+
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 8.0ms | Allocations: 1028)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:55 -0400
+Started GET "/categories" for ::1 at 2020-04-10 16:59:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:55 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (5.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms | Allocations: 3396)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 5.2ms | Allocations: 3418)
+
+
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 6.9ms | Allocations: 2483)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 16:59:58 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-10 16:59:58 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 16:59:58 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (6.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 4389)
+
+
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 1.0ms | Allocations: 4274)
+
+
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 6.7ms | Allocations: 6443)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:00:39 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:00:39 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:00:39 -0400
+  [1m[36mResource Load (2.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 2.2ms | Allocations: 3793)
+
+
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.6ms | Allocations: 1539)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:00:46 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:00:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:00:46 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 1.8ms | Allocations: 3323)
+
+
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (17.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 16.0ms | Allocations: 4000)
+
+
+Completed 200 OK in 21ms (Views: 4.2ms | ActiveRecord: 17.0ms | Allocations: 4743)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:00:48 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:00:48 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:00:48 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 1.3ms | Allocations: 3136)
+
+
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (6.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 8.7ms | Allocations: 3946)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 6.7ms | Allocations: 4100)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:01:40 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:01:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:01:40 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 3413)
+
+
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 2.0ms | Allocations: 4435)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:02:16 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:02:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:02:16 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 11.1ms | Allocations: 1352)
+
+
+  [1m[36mResource Load (13.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 5.0ms | ActiveRecord: 13.7ms | Allocations: 4042)
+
+
+  [1m[36mCategory Load (46.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 9.6ms | ActiveRecord: 46.7ms | Allocations: 4788)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:02:23 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:02:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:02:23 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (4.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 4.9ms | Allocations: 3551)
+
+
+  [1m[36mCategory Load (8.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 8.7ms | Allocations: 4019)
+
+
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 14.3ms | Allocations: 4813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:03:23 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:03:23 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:03:23 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (2.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 2.4ms | Allocations: 1791)
+
+
+  [1m[36mResource Load (3.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 3.9ms | Allocations: 4089)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 5.2ms | Allocations: 4841)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:03:39 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2422)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 17:03:39 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:03:39 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 946)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 2215)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:04:01 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:04:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:04:01 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (4.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 4.2ms | Allocations: 2004)
+
+
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mResource Load (12.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 12.4ms | Allocations: 2811)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 6.3ms | ActiveRecord: 12.4ms | Allocations: 4731)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:04:18 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 3083)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 17:04:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:04:18 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+  [1m[36mCategory Load (3.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.2ms | Allocations: 2795)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:04:25 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:04:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:04:25 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.8ms | Allocations: 3597)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3690)
+
+
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 4722)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:05:28 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:05:28 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:05:28 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (7.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mResource Load (4.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 10ms (Views: 2.8ms | ActiveRecord: 7.0ms | Allocations: 2846)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 4.0ms | Allocations: 2187)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 4.9ms | Allocations: 4788)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:05:31 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:05:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:05:31 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 2.1ms | Allocations: 2422)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1934)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 2241)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:05:33 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:05:33 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:05:33 -0400
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.1ms | Allocations: 2807)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.2ms | Allocations: 3963)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:06:01 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:06:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:06:01 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 1.1ms | Allocations: 3323)
+
+
+  [1m[36mCategory Load (19.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 4.1ms | ActiveRecord: 19.0ms | Allocations: 4472)
+
+
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 18.9ms | Allocations: 4633)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:08:51 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:08:51 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:08:51 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (2.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.2ms | Allocations: 4215)
+
+
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 3846)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 4813)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 17:09:15 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:09:15 -0400
+Started GET "/resources" for ::1 at 2020-04-10 17:09:15 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (18.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 3.7ms | ActiveRecord: 18.0ms | Allocations: 2423)
+
+
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (20.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 9.2ms | ActiveRecord: 20.3ms | Allocations: 4900)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 31ms (Views: 0.5ms | ActiveRecord: 17.7ms | Allocations: 4627)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:09:26 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:09:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:09:26 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (7.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (7.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.7ms | ActiveRecord: 7.8ms | Allocations: 3004)
+
+
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 7.4ms | Allocations: 4264)
+
+
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 13.1ms | Allocations: 1860)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:09:30 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:09:30 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:09:30 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 1903)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.6ms | Allocations: 2551)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 2.7ms | Allocations: 4694)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:09:32 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:09:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:09:32 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 3551)
+
+
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 3.0ms | Allocations: 3867)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 3978)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:12:05 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:12:05 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:12:05 -0400
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.9ms | Allocations: 2296)
+
+
+  [1m[36mResource Load (5.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 19.2ms | ActiveRecord: 5.3ms | Allocations: 4145)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:13:01 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:13:01 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:13:01 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (3.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 3.0ms | Allocations: 3772)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.4ms | Allocations: 4257)
+
+
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 4568)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:13:18 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:13:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:13:18 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 1.3ms | Allocations: 3590)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.5ms | Allocations: 3889)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 4217)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:13:22 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:13:22 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:13:22 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mResource Load (2.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 2957)
+
+
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2683)
+
+
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 2.5ms | Allocations: 5066)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:13:28 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:13:28 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:13:28 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (13.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 6.1ms | ActiveRecord: 13.3ms | Allocations: 3861)
+
+
+  [1m[36mCategory Load (17.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 3.4ms | ActiveRecord: 17.5ms | Allocations: 3896)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:13:59 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:13:59 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:13:59 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 2740)
+
+
+  [1m[36mCategory Load (4.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 4127)
+
+
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 4.1ms | Allocations: 4573)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:14:10 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:14:10 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:14:10 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.6ms | Allocations: 4585)
+
+
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.1ms | Allocations: 3659)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 4844)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:14:17 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:14:17 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:14:17 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.4ms | Allocations: 3009)
+
+
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 1.2ms | Allocations: 4445)
+
+
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:15:09 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:15:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:15:09 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 3199)
+
+
+  [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 5.5ms | Allocations: 3827)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:15:49 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:15:49 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:15:49 -0400
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (4.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 1991)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 4.5ms | Allocations: 4642)
+
+
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 3.0ms | Allocations: 4216)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:15:56 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:15:56 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:15:56 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (2.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (4.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 2.7ms | Allocations: 3553)
+
+
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 4.9ms | Allocations: 4482)
+
+
+Completed 200 OK in 37ms (Views: 0.6ms | ActiveRecord: 18.9ms | Allocations: 4813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:16:02 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:16:02 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:16:02 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 2442)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (12.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 22ms (Views: 8.9ms | ActiveRecord: 12.5ms | Allocations: 2109)
+
+
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 5.4ms | Allocations: 2053)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:19:14 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:19:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:19:14 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (6.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 6.4ms | Allocations: 2408)
+
+
+  [1m[36mResource Load (27.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mUser Load (28.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 63ms (Views: 35.1ms | ActiveRecord: 27.3ms | Allocations: 4473)
+
+
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 28.3ms | Allocations: 4608)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:19:29 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:19:29 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:19:29 -0400
+  [1m[36mResource Load (14.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (11.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 22ms (Views: 7.0ms | ActiveRecord: 14.2ms | Allocations: 4487)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 9.2ms | ActiveRecord: 11.5ms | Allocations: 3894)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 13.9ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:19:38 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:19:38 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:19:38 -0400
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 2935)
+
+
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.6ms | Allocations: 1519)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:19:43 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:19:43 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:19:43 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 3.2ms | Allocations: 4086)
+
+
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 1.8ms | Allocations: 4266)
+
+
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 10.4ms | Allocations: 1854)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:21:53 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:21:53 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:21:53 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (9.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (7.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 7.0ms | Allocations: 4287)
+
+
+Completed 200 OK in 17ms (Views: 7.1ms | ActiveRecord: 9.6ms | Allocations: 4181)
+
+
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 4841)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:22:20 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:22:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:22:20 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 2632)
+
+
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.7ms | Allocations: 4012)
+
+
+  [1m[36mUser Load (9.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.5ms | ActiveRecord: 9.8ms | Allocations: 4798)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:22:49 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:22:49 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:22:49 -0400
+  [1m[36mResource Load (10.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 10.4ms | Allocations: 3360)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (4.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 4.8ms | Allocations: 1894)
+
+
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 15.7ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:23:33 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:23:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:23:33 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 2.8ms | Allocations: 3551)
+
+
+  [1m[36mCategory Load (4.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 4.0ms | Allocations: 4292)
+
+
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 5.5ms | Allocations: 4735)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:24:04 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:24:04 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 3212)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:24:04 -0400
+  [1m[36mCategory Load (6.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 6.1ms | Allocations: 4799)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:24:33 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:24:33 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.4ms | Allocations: 1751)
+
+
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:24:33 -0400
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 1.2ms | Allocations: 4786)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 4.5ms | Allocations: 813)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:24:34 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:24:34 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:24:34 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (19.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 26ms (Views: 5.9ms | ActiveRecord: 19.7ms | Allocations: 4107)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (8.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 8.5ms | Allocations: 4467)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 3.4ms | Allocations: 2241)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:24:36 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Started GET "/categories" for ::1 at 2020-04-10 17:24:36 -0400
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:24:36 -0400
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.6ms | Allocations: 4150)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 813)
+
+
+  [1m[36mCategory Load (5.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 5.7ms | Allocations: 2380)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:24:55 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:24:55 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:24:55 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.0ms | Allocations: 3421)
+
+
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 1.6ms | Allocations: 4435)
+
+
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:25:26 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:25:26 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:25:26 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.9ms | Allocations: 2968)
+
+
+  [1m[36mCategory Load (5.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.6ms | ActiveRecord: 5.5ms | Allocations: 4467)
+
+
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 10.7ms | Allocations: 2483)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:25:35 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 2422)
+
+
+Started GET "/categories" for ::1 at 2020-04-10 17:25:35 -0400
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:25:35 -0400
+  [1m[36mCategory Load (7.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 7.9ms | Allocations: 2204)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 3.1ms | Allocations: 871)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:26:09 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:26:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:26:09 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.9ms | Allocations: 3555)
+
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mCategory Load (5.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 2.7ms | Allocations: 2783)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 5.1ms | Allocations: 5334)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:26:14 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:26:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:26:14 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mResource Load (2.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.9ms | Allocations: 2193)
+
+
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms | Allocations: 1623)
+
+
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 2.9ms | Allocations: 4358)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:26:16 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:26:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:26:16 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 1567)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 4.0ms | Allocations: 2909)
+
+
+  [1m[36mResource Load (7.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 7.5ms | Allocations: 3292)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:28:29 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:28:29 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:28:29 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.7ms | Allocations: 3978)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 3919)
+
+
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.3ms | Allocations: 4357)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:28:32 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:28:32 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:28:32 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 2774)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.7ms | Allocations: 4106)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 6.0ms | Allocations: 871)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:28:36 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:28:36 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:28:36 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms | Allocations: 2965)
+
+
+  [1m[36mCategory Load (2.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.6ms | Allocations: 3843)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 1639)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:30:04 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:30:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:30:04 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms | Allocations: 3120)
+
+
+  [1m[36mCategory Load (13.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 4.6ms | ActiveRecord: 13.6ms | Allocations: 4667)
+
+
+Completed 200 OK in 18ms (Views: 0.5ms | ActiveRecord: 11.6ms | Allocations: 3996)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:30:07 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:30:07 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:30:07 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (5.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 5.0ms | Allocations: 3320)
+
+
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 9.2ms | Allocations: 3498)
+
+
+  [1m[36mCategory Load (11.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 3.8ms | ActiveRecord: 11.8ms | Allocations: 4788)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:30:09 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:30:09 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:30:09 -0400
+  [1m[36mResource Load (2.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 2.3ms | Allocations: 3351)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.9ms | Allocations: 1912)
+
+
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2053)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:30:14 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:30:14 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:30:14 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 2.0ms | Allocations: 3551)
+
+
+  [1m[36mCategory Load (6.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 3996)
+
+
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 6.0ms | Allocations: 4469)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-10 17:30:25 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"id"=>"1", "resource"=>{}}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms | Allocations: 1168)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: resource:
+  app/controllers/resources_controller.rb:50:in `resource_params'
+  app/controllers/resources_controller.rb:30:in `update'
+
+Started PUT "/resources/2" for ::1 at 2020-04-10 17:37:35 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"id"=>"2", "resource"=>{}}
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+Completed 400 Bad Request in 11ms (ActiveRecord: 0.8ms | Allocations: 5637)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: resource:
+  app/controllers/resources_controller.rb:51:in `update_params'
+  app/controllers/resources_controller.rb:30:in `update'
+
+Started GET "/resources" for ::1 at 2020-04-10 17:39:34 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:39:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:39:34 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (9.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 19.7ms | ActiveRecord: 9.8ms | Allocations: 2894)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (9.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 10.7ms | ActiveRecord: 9.2ms | Allocations: 5738)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 5655)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:39:35 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:39:35 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:39:35 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 4093)
+
+
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.2ms | Allocations: 3604)
+
+
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 1265)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:39:40 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:39:40 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:39:40 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (8.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 7.3ms | ActiveRecord: 8.2ms | Allocations: 2971)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (48.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 51ms (Views: 2.4ms | ActiveRecord: 48.3ms | Allocations: 3854)
+
+
+  [1m[36mUser Load (100.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 247ms (Views: 0.4ms | ActiveRecord: 141.7ms | Allocations: 2478)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:39:43 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:39:43 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:39:43 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 3.4ms | Allocations: 3899)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (58.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 62ms (Views: 2.8ms | ActiveRecord: 58.7ms | Allocations: 4444)
+
+
+  [1m[36mUser Load (165.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 168ms (Views: 0.3ms | ActiveRecord: 165.3ms | Allocations: 2277)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-10 17:40:32 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"Creating Zoom breakout rooms", "link"=>"EDIT https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4", "description"=>"Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."}, "id"=>"1"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mResource Update (6.6ms)[0m  [1m[33mUPDATE "resources" SET "link" = $1, "updated_at" = $2 WHERE "resources"."id" = $3[0m  [["link", "EDIT https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4"], ["updated_at", "2020-04-10 21:40:32.989616"], ["id", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 50ms (Views: 0.5ms | ActiveRecord: 20.1ms | Allocations: 15544)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:40:33 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 2422)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:42:34 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:42:34 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:42:34 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (14.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 14.0ms | Allocations: 6734)
+
+
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 20.9ms | Allocations: 7532)
+
+
+  [1m[36mCategory Load (10.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 77ms (Views: 8.9ms | ActiveRecord: 64.0ms | Allocations: 8987)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:42:46 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:42:46 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:42:46 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 2.0ms | Allocations: 2909)
+
+
+  [1m[36mCategory Load (8.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 8.6ms | Allocations: 4047)
+
+
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 14.4ms | Allocations: 4841)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:42:50 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:42:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:42:50 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (35.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (37.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 7.5ms | ActiveRecord: 37.2ms | Allocations: 4180)
+
+
+Completed 200 OK in 45ms (Views: 9.5ms | ActiveRecord: 35.2ms | Allocations: 4252)
+
+
+  [1m[36mUser Load (43.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 110ms (Views: 0.4ms | ActiveRecord: 43.4ms | Allocations: 4841)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-10 17:43:48 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"Creating Zoom breakout rooms", "link"=>"EDIT https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4", "description"=>"Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."}, "id"=>"1"}
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 3470)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:43:48 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 2423)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:44:18 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:44:18 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:44:18 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.3ms | Allocations: 2423)
+
+
+  [1m[36mUser Load (33.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 36ms (Views: 0.4ms | ActiveRecord: 33.1ms | Allocations: 1639)
+
+
+  [1m[36mResource Load (44.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 5.5ms | ActiveRecord: 44.3ms | Allocations: 5378)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:44:20 -0400
+Started GET "/categories" for ::1 at 2020-04-10 17:44:20 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-10 17:44:20 -0400
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (11.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 2.6ms | ActiveRecord: 11.5ms | Allocations: 2423)
+
+
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 20.5ms | Allocations: 2797)
+
+
+  [1m[36mResource Load (39.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 45ms (Views: 5.2ms | ActiveRecord: 39.3ms | Allocations: 4788)
+
+
+Started PUT "/resources/3" for ::1 at 2020-04-10 17:45:09 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"Setting up your Zoom classroom", "link"=>"EDIT https://youtu.be/ocTFLh46fgE", "description"=>"Go through all the settings in zoom with the pros and cons of each in less than 23 minutes."}, "id"=>"3"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mResource Update (1.0ms)[0m  [1m[33mUPDATE "resources" SET "link" = $1, "updated_at" = $2 WHERE "resources"."id" = $3[0m  [["link", "EDIT https://youtu.be/ocTFLh46fgE"], ["updated_at", "2020-04-10 21:45:09.881316"], ["id", 3]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 20ms (Views: 0.8ms | ActiveRecord: 9.4ms | Allocations: 4264)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:45:10 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2422)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-10 17:49:58 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"Creating Zoom breakout rooms", "link"=>"https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4", "description"=>"Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."}, "id"=>"1"}
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mResource Update (0.5ms)[0m  [1m[33mUPDATE "resources" SET "link" = $1, "updated_at" = $2 WHERE "resources"."id" = $3[0m  [["link", "https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4"], ["updated_at", "2020-04-10 21:49:58.915149"], ["id", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 4263)
+
+
+Started GET "/resources" for ::1 at 2020-04-10 17:49:58 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.6ms | Allocations: 2422)
+
+

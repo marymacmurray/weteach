@@ -115,10 +115,8 @@ export default function Home(props) {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button component={Link} to={`${resource.link}`} size="small" color="primary">
-                      View
-                    </Button>
-                    <Button component={Link} to={`/resources/:${resource.id}`} size="small" color="primary">
+                    <Button size="small" color="primary" target="_blank" href={`${resource.link}`}>View</Button>
+                    <Button onClick={()=>{props.setResource(resource.id)}} size="small" color="primary" >
                       Edit
                     </Button>
                   </CardActions>

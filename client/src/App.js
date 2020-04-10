@@ -18,6 +18,7 @@ class App extends React.Component {
     user: null,
     resources: [],
     categories: [],
+    selected: ''
 
   }
 
@@ -44,6 +45,12 @@ class App extends React.Component {
     this.setState({ resource });
   }
 
+  setResource = (id) => {
+    this.setState({
+      selected: id
+    })
+    this.props.history.push(`/resources/${id}`)
+  }
   // ====================================
   // ============= Categories ==============
   // ====================================
@@ -66,6 +73,7 @@ class App extends React.Component {
           <Route exact path='/' render={(props) => (
             <Home
               {...props}
+              setResource={this.setResource}
               user={this.state.currentUser}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (
@@ -73,17 +81,13 @@ class App extends React.Component {
               (<Signup {...props} setUser={this.setUser} />) :
             (<SignIn {...props} setUser={this.setUser} />)
           )} />
-          <Route exact path='/resources/:id' render={(props) => (
-            <EditResource
-              {...props}
-              getOneResource={this.getOneResource}
-              getResources={this.getResources}
-              user={this.state.currentUser}
-            />
-          )}/>
-          <Route exact path='/resources' render={(props) => (
+          
+          <Route path='/resources' render={(props) => (
             <ResourcesIndex
               {...props}
+              setResource={this.setResource}
+              selected={this.state.selected}
+              getOneResource={this.getOneResource}
               getResources={this.getResources}
               user={this.state.currentUser}
               resources={this.state.resources}
