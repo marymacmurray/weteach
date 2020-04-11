@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom"
-import {destroyResource} from '../services/api-helper'
+import { destroyResource, verifyUser } from '../services/api-helper'
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -54,7 +54,7 @@ export default function Home(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-      
+
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
@@ -68,9 +68,17 @@ export default function Home(props) {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button component={Link} to="/auth/login" variant="contained" color="primary">
-                    Sign Up
-                  </Button>
+
+                  {props.user ? <Button component={Link} to="/" onClick={() => { { props.clearUser() } }} variant="contained" color="primary" color="inherit">Logout</Button>
+                    :
+                    <Button component={Link} to="/auth/login" variant="contained" color="primary">Sign Up</Button>
+                  }
+
+                  {/* // localStorage.getItem('authToken') 
+                      //   <Button component={Link} to="/auth/login" variant="contained" color="primary">
+                      //     Sign Up
+                      //   </Button> */}
+
                 </Grid>
                 <Grid item>
                   <Button component={Link} to="/resources" variant="outlined" color="primary">
@@ -89,7 +97,7 @@ export default function Home(props) {
                 <Card className={classes.card}>
                   <CardMedia
                     component="img"
-                    className={classes.cardMedia}
+                    className={classes.img}
                     title={resource.name}
                     src={resource.image}
                   />
@@ -103,7 +111,7 @@ export default function Home(props) {
                   </CardContent>
                   <CardActions>
                     <Button size="small" color="primary" target="_blank" href={`${resource.link}`}>Go</Button>
-                    <Button onClick={()=>{props.setResource(resource.id)}} size="small" color="primary" >
+                    <Button onClick={() => { props.setResource(resource.id) }} size="small" color="primary" >
                       Edit
                     </Button>
                     <Button onClick={() => {
@@ -120,7 +128,7 @@ export default function Home(props) {
           </Grid>
         </Container>
       </main>
-      
+
     </React.Fragment>
   );
 }

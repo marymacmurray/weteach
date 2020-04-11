@@ -1,7 +1,6 @@
 import React from 'react'
-import { registerUser, loginUser, verifyUser } from '../services/api-helper'
+import { registerUser, loginUser } from '../services/api-helper'
 // import { Link } from '@material-ui/core'
-import SignIn from '../SignIn'
 
 
 class SignUp extends React.Component {

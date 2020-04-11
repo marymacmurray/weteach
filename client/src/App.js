@@ -10,6 +10,7 @@ import Signup from './components/Signup'
 import Home from './components/Home'
 import SignIn from './components/SignIn';
 import EditResource from './components/EditResource'
+import SignUp from './components/Signup';
 // import EnsureLoggedInContainer from './components/EnsureLoggedInContainer'
 
 
@@ -27,7 +28,7 @@ class App extends React.Component {
     this.getCategories();
     const currentUser = await verifyUser();
     if (currentUser) {
-      this.setState({ currentUser })
+      this.setState({ user:currentUser })
     }
   }
 
@@ -73,7 +74,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Layout user={this.state.currentUser}>
+      <Layout
+        clearUser={this.clearUser}
+        user={this.state.user}>
         <div>
           <Route exact path='/' render={(props) => (
             <Home
@@ -81,12 +84,12 @@ class App extends React.Component {
               deleteResource={this.deleteResource}
               setResource={this.setResource}
               getResources={this.getResources}
-              user={this.state.currentUser}
+              user={this.state.user}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (
-            !this.state.currentUser ? 
-              (<Signup {...props} setUser={this.setUser} />) :
-            (<SignIn {...props} setUser={this.setUser} />)
+            !this.state.user && localStorage.getItem('authToken') ? 
+              (<SignIn {...props} setUser={this.setUser} />) :
+            (<SignUp {...props} setUser={this.setUser} />)
           )} />
           
           <Route path='/resources' render={(props) => (
@@ -96,7 +99,7 @@ class App extends React.Component {
               selected={this.state.selected}
               getOneResource={this.getOneResource}
               getResources={this.getResources}
-              user={this.state.currentUser}
+              user={this.state.user}
               resources={this.state.resources}
             />
           )}
@@ -104,7 +107,7 @@ class App extends React.Component {
           <Route path='/categories' render={(props) => (
             <CategoriesIndex
               {...props}
-              user={this.state.currentUser}
+              user={this.state.user}
               categories={this.state.categories}
             />
           )}

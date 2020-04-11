@@ -1,30 +1,34 @@
 import React from 'react'
 import { loginUser } from '../services/api-helper'
 // import { Link } from '@material-ui/core'
+import SignIn from '../SignIn'
 
 
-class SignIn extends React.Component {
+class SignUp extends React.Component {
   constructor() {
     super()
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      errorMsg: ''
     }
   }
 
   handleChange = event =>
     this.setState({
       [event.target.name]: event.target.value,
-
+      isError: false,
+      errorMsg: ''
     })
 
-  onSignUp = async (event) => {
+  onSignIn = async (event) => {
     event.preventDefault()
 
     const { setUser, history } = this.props
     try
     {
-    const user = await loginUser(this.state)
+      const {username,password} = this.state
+      const user = await loginUser({ username,password })
     await setUser(user)  //set the user in App.js
     await history.push('/')
     }
@@ -33,26 +37,26 @@ class SignIn extends React.Component {
       }
   }
 
-  // renderError = () => {
-  //   const toggleForm = this.state.isError ? 'danger' : ''
-  //   if (this.state.isError) {
-  //     return (
-  //       <button type="submit" className={toggleForm}>
-  //         {this.state.errorMsg}
-  //       </button>
-  //     )
-  //   } else {
-  //     return <button type="submit">Sign In</button>
-  //   }
-  // }
+  renderError = () => {
+    const toggleForm = this.state.isError ? 'danger' : ''
+    if (this.state.isError) {
+      return (
+        <button type="submit" className={toggleForm}>
+          {this.state.errorMsg}
+        </button>
+      )
+    } else {
+      return <button type="submit">Sign In</button>
+    }
+  }
 
   render() {
     const { username, password } = this.state
 
     return (
       <div className="signup">
-        <h2>Sign In</h2>
-        <form className="signupform" onSubmit={this.onSignUp}>
+        <h2>Sign Up</h2>
+        <form className="signupform" onSubmit={this.onSignIn}>
           <label>Username</label>
           <div>
             <input
@@ -65,6 +69,7 @@ class SignIn extends React.Component {
             />
           </div>
           <br />
+          <label>Email address</label>
           <br />
           <label>Password</label>
           <div>
@@ -79,11 +84,11 @@ class SignIn extends React.Component {
           </div>
           <br />
           <button type="submit">Sign In</button>
-          {/* {this.renderError()} */}
+          {this.renderError()}
         </form>
       </div>
     )
   }
 }
 
-export default SignIn
+export default SignUp

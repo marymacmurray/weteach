@@ -11,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link } from "react-router-dom"
 import { MemoryRouter as Router } from 'react-router';
-import SignOut from './SignOut'
+import { signOut } from '../services/api-helper';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +60,7 @@ export default function ButtonAppBar(props) {
           <Typography variant="inherit">
           </Typography>
           <Button component={Link} to="/" color="inherit">Home</Button>
-          <Button component={Link} to="/" onClick={()=>{return(<SignOut/>)}}color="inherit">Logout</Button>
+          <Button component={Link} to="/" onClick={() => {{props.clearUser()}}} color="inherit">Logout</Button>
 
         </Toolbar>
       </AppBar>
