@@ -6,10 +6,8 @@ import Layout from './components/Layout'
 import { readAllResources, readAllCategories, verifyUser, readOneResource } from './services/api-helper';
 import ResourcesIndex from './components/ResourcesIndex';
 import CategoriesIndex from './components/CategoriesIndex';
-import Signup from './components/Signup'
 import Home from './components/Home'
 import SignIn from './components/SignIn';
-import EditResource from './components/EditResource'
 import SignUp from './components/Signup';
 // import EnsureLoggedInContainer from './components/EnsureLoggedInContainer'
 
@@ -38,7 +36,8 @@ class App extends React.Component {
 
   getResources = async () => {
     const resources = await readAllResources();
-    this.setState({ resources });
+    const sortedResources = resources.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1);
+    this.setState({ resources:sortedResources,selected:'' });
   }
 
   getOneResource = async (id) => {
@@ -53,8 +52,10 @@ class App extends React.Component {
     this.props.history.push(`/resources/${id}`)
   }
 
-  deleteResource = async () => {
+  deleteResource = async (id) => {
+    
     await this.getResources()
+    this.componentDidMount()
     this.props.history.push('/')
   }
   // ====================================
@@ -81,6 +82,7 @@ class App extends React.Component {
           <Route exact path='/' render={(props) => (
             <Home
               {...props}
+              clearUser={this.clearUser}
               deleteResource={this.deleteResource}
               setResource={this.setResource}
               getResources={this.getResources}

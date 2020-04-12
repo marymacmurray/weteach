@@ -54,7 +54,7 @@ class SignUp extends React.Component {
 
     return (
       <div className="signup">
-        <h2>Sign Up</h2>
+        <h2>Welcome</h2>
         <form className="signupform" onSubmit={this.onSignUp}>
           <label>Username</label>
           <div>
@@ -92,7 +92,7 @@ class SignUp extends React.Component {
             />
           </div>
           <br />
-          <button type="submit">Sign In</button>
+          <button type="submit">Stuff</button>
           {/* {this.renderError()} */}
         </form>
       </div>

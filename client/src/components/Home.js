@@ -69,21 +69,16 @@ export default function Home(props) {
               <Grid container spacing={2} justify="center">
                 <Grid item>
 
-                  {props.user ? <Button component={Link} to="/" onClick={() => { { props.clearUser() } }} variant="contained" color="primary" color="inherit">Logout</Button>
+                  {props.user ? <Button component={Link} to="/" onClick={() => {{props.clearUser()}}} variant="contained" color="primary" color="inherit">Logout</Button>
                     :
                     <Button component={Link} to="/auth/login" variant="contained" color="primary">Sign Up</Button>
                   }
-
-                  {/* // localStorage.getItem('authToken') 
-                      //   <Button component={Link} to="/auth/login" variant="contained" color="primary">
-                      //     Sign Up
-                      //   </Button> */}
 
                 </Grid>
                 <Grid item>
                   <Button component={Link} to="/resources" variant="outlined" color="primary">
                     Add Resources
-                  </Button>
+                   </Button>
                 </Grid>
               </Grid>
             </div>
@@ -99,7 +94,7 @@ export default function Home(props) {
                     component="img"
                     className={classes.img}
                     title={resource.name}
-                    src={resource.image}
+                    src={resource.image ? resource.image : "https://i.imgur.com/fPKyi1p.png"}
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
@@ -117,7 +112,7 @@ export default function Home(props) {
                     <Button onClick={() => {
                       props.setResource(resource.id)
                       destroyResource(resource.id)
-                      props.deleteResource()
+                      props.deleteResource(resource.id)
                     }} size="small" color="primary" >
                       Delete
                     </Button>

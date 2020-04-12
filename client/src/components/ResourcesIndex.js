@@ -80,10 +80,6 @@ class ResourcesIndex extends React.Component {
             createSubmit={this.createSubmit}
           />
         )} />
-        {/* <h3>Resources list:</h3>
-        {this.props.resources.map((resource) => (
-          <p key={resource.id}>{resource.name}</p>
-        ))} */}
       </>
     )
   }

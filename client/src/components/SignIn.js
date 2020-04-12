@@ -1,10 +1,9 @@
 import React from 'react'
 import { loginUser } from '../services/api-helper'
 // import { Link } from '@material-ui/core'
-import SignIn from '../SignIn'
 
 
-class SignUp extends React.Component {
+class SignIn extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -55,7 +54,7 @@ class SignUp extends React.Component {
 
     return (
       <div className="signup">
-        <h2>Sign Up</h2>
+        <h2>Welcome</h2>
         <form className="signupform" onSubmit={this.onSignIn}>
           <label>Username</label>
           <div>
@@ -69,7 +68,6 @@ class SignUp extends React.Component {
             />
           </div>
           <br />
-          <label>Email address</label>
           <br />
           <label>Password</label>
           <div>
@@ -84,11 +82,11 @@ class SignUp extends React.Component {
           </div>
           <br />
           <button type="submit">Sign In</button>
-          {this.renderError()}
+          {/* {this.renderError()} */}
         </form>
       </div>
     )
   }
 }
 
-export default SignUp
+export default SignIn
