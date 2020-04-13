@@ -39,11 +39,15 @@ export default function CreateResource(props) {
           event.preventDefault();
           props.createSubmit();
         }}>
-      <TextField id="outlined-basic" label="link" name="link" variant="outlined" onChange={props.handleChange} />
+          <TextField
+            required={true}
+            error={""?true:false}
+            errortext={"Can't be blank"||""} helperText={"Can't be blank"||""}
+            id="outlined-required" label="link" name="link" variant="outlined" onChange={props.handleChange} />
           <br></br>  
-        <TextField id="outlined-basic" label="title" name="name" variant="outlined" onChange={props.handleChange} />
+        <TextField required id="outlined-required" label="title" name="name" variant="outlined" onChange={props.handleChange} />
           <br></br>
-        <TextField id="outlined-basic" label="description" name="description" variant="outlined" onChange={props.handleChange}/>
+        <TextField required id="outlined-required" label="description" name="description" variant="outlined" onChange={props.handleChange}/>
           <br></br>  
         <Button
           variant="contained"

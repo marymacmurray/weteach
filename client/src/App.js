@@ -89,9 +89,9 @@ class App extends React.Component {
               user={this.state.user}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (
-            !this.state.user && localStorage.getItem('authToken') ? 
-              (<SignIn {...props} setUser={this.setUser} />) :
-            (<SignUp {...props} setUser={this.setUser} />)
+            !this.state.user && !localStorage.getItem('authToken') ? 
+              (<SignUp {...props} setUser={this.setUser} />) :
+            (<SignIn {...props} setUser={this.setUser} />)
           )} />
           
           <Route path='/resources' render={(props) => (

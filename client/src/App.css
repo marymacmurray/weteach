@@ -14,3 +14,8 @@
 .signupform.input{
   width: 10%;
 }
+
+.MuiCardActions-root{
+        
+  justify-content: space-evenly;
+}

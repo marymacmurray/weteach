@@ -1,6 +1,7 @@
 import React from 'react'
 import { loginUser } from '../services/api-helper'
-// import { Link } from '@material-ui/core'
+import { Route, Link } from 'react-router-dom'
+import SignUp from './Signup'
 
 
 class SignIn extends React.Component {
@@ -82,7 +83,11 @@ class SignIn extends React.Component {
           </div>
           <br />
           <button type="submit">Sign In</button>
-          {/* {this.renderError()} */}
+          <h3>New here?  
+          <Route path="/auth/login" component={SignUp}>
+              <Link to="/auth/login">Sign up with us</Link>
+            </Route>
+          </h3>
         </form>
       </div>
     )
