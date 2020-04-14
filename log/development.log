@@ -32429,3 +32429,24 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1006)
 
 
+Started GET "/resources" for ::1 at 2020-04-14 11:01:24 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-14 11:01:24 -0400
+Started GET "/categories" for ::1 at 2020-04-14 11:01:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 4.7ms | Allocations: 2360)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.6ms | Allocations: 1499)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1362)
+
+
