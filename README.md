@@ -172,7 +172,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 
 
-### Time estimates (Phase 1️⃣)
+### Time - Phase 1️⃣
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | 
