@@ -116,7 +116,8 @@ Testing:
 </br>
 
 * Deployment instructions
- 1.  Normal heroku deployment, except that there is an environment variable used for securing the authentication with a secret key, check out  `application_controller.rb` to see that.  
+  1. <b>Backend</b>: Normal heroku deployment, except that there is an environment variable used for securing the authentication with a secret key, check out  `application_controller.rb` to see that.  
+  2. <b>Frontend:</b>  See more info below.  Normal surge deployment, except that react routing uses 200.html instead of index.html.
 
 
 ### ✏️ Steps to get your frontend up and running 
