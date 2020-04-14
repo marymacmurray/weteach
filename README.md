@@ -103,6 +103,7 @@ Testing:
   2. `bundle`
 
 * Database creation
+<br></br>
   3. `rails db:create`
 
 * Database initialization
