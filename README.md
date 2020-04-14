@@ -101,19 +101,15 @@ Testing:
   Make sure you have rails and bundle installed.
   1. `cd` into the repo 
   2. `bundle`
-</br>
 
 * Database creation
   3. `rails db:create`
-</br>
 
 * Database initialization
   4. `rails db:migrate`
   5. `rails db:seed` 
-</br>
 
 * How to run the test suite (there is currently no test suite for this app)
-</br>
 
 * Deployment instructions
   1. <b>Backend</b>: Normal heroku deployment, except that there is an environment variable used for securing the authentication with a secret key, check out  `application_controller.rb` to see that.  
