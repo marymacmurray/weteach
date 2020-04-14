@@ -99,6 +99,7 @@ Testing:
 * Configuration:
 
   Make sure you have rails and bundle installed.
+<br></br>
   1. `cd` into the repo 
   2. `bundle`
 
@@ -107,6 +108,7 @@ Testing:
   3. `rails db:create`
 
 * Database initialization
+<br></br>
   4. `rails db:migrate`
   5. `rails db:seed` 
 
