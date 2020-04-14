@@ -32308,3 +32308,124 @@ Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 2046)
 Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 2897)
 
 
+Started GET "/resources" for ::1 at 2020-04-14 10:50:36 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:50:36 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (2.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.9ms | Allocations: 2043)
+
+
+  [1m[36mResource Load (2.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 2.9ms | Allocations: 2989)
+
+
+Started GET "/categories" for ::1 at 2020-04-14 10:50:59 -0400
+Started GET "/resources" for ::1 at 2020-04-14 10:50:59 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ResourcesController#index as HTML
+  [1m[35m (19.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (6.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 10.0ms | ActiveRecord: 16.2ms | Allocations: 17089)
+
+
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 5.1ms | Allocations: 7284)
+
+
+Started POST "/users/" for ::1 at 2020-04-14 10:51:45 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"newuser2", "email"=>"m@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "newuser2"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "newuser2"], ["email", "m@gmail.com"], ["password_digest", "$2a$12$syoAn6e.VrKK1vkr64pup.x10SCFBwwfoG4bwCOJ8RZwnTCo7lyVC"], ["created_at", "2020-04-14 14:51:45.327305"], ["updated_at", "2020-04-14 14:51:45.327305"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 282ms (Views: 0.7ms | ActiveRecord: 17.5ms | Allocations: 9266)
+
+
+Started POST "/auth/login" for ::1 at 2020-04-14 10:51:45 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"auth"=>{"username"=>"newuser2", "email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "authentication"=>{"auth"=>{"username"=>"newuser2", "email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+[31mUnpermitted parameter: :email[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "newuser2"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+[31mUnpermitted parameter: :email[0m
+Completed 200 OK in 265ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1291)
+
+
+Started POST "/resources" for ::1 at 2020-04-14 10:51:57 -0400
+Processing by ResourcesController#create as HTML
+  Parameters: {"resource"=>{"name"=>"sdfdsf", "link"=>"safdsd", "description"=>"sdfsd", "user_id"=>37}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[36mResource Create (8.9ms)[0m  [1m[32mINSERT INTO "resources" ("user_id", "link", "description", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 37], ["link", "safdsd"], ["description", "sdfsd"], ["created_at", "2020-04-14 14:51:57.846845"], ["updated_at", "2020-04-14 14:51:57.846845"], ["name", "sdfdsf"]]
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:21:in `create'
+Completed 201 Created in 33ms (Views: 0.7ms | ActiveRecord: 15.0ms | Allocations: 6086)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:51:57 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 1586)
+
+
+Started DELETE "/resources/30" for ::1 at 2020-04-14 10:52:00 -0400
+Started GET "/resources" for ::1 at 2020-04-14 10:52:00 -0400
+Processing by ResourcesController#destroy as HTML
+  Parameters: {"id"=>"30"}
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.7ms | Allocations: 4334)
+
+
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:39:in `destroy'
+  [1m[36mResource::HABTM_Categories Destroy (0.7ms)[0m  [1m[31mDELETE FROM "categories_resources" WHERE "categories_resources"."resource_id" = $1[0m  [["resource_id", 30]]
+  ↳ app/controllers/resources_controller.rb:39:in `destroy'
+  [1m[36mResource Destroy (0.7ms)[0m  [1m[31mDELETE FROM "resources" WHERE "resources"."id" = $1[0m  [["id", 30]]
+  ↳ app/controllers/resources_controller.rb:39:in `destroy'
+  [1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:39:in `destroy'
+Completed 204 No Content in 44ms (ActiveRecord: 23.0ms | Allocations: 8475)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:52:00 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:52:00 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Started GET "/auth/verify" for ::1 at 2020-04-14 10:52:00 -0400
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.6ms | Allocations: 2790)
+
+
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 1753)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 1006)
+
+
