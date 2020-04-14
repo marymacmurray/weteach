@@ -96,9 +96,8 @@ Testing:
 
 * Ruby version: ruby 2.6.4
 
-* Configuration:
+* Configuration (Make sure you have rails and bundle installed):
 
-  Make sure you have rails and bundle installed.
 <br></br>
   1. `cd` into the repo 
   2. `bundle`
