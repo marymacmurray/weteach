@@ -1,8 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-// import { Redirect } from "react-router-dom";
-import { browserHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,23 +15,10 @@ const useStyles = makeStyles((theme) => ({
 export default function CreateResource(props) {
   const classes = useStyles()
 
-  // const onSubmit = event => {
-  //   event.preventDefault()
-  //   console.log('post new resource.')
-  // }
-
-  // const handleChange = event => {
-  //   this.setState({
-  //     [event.target.label]: event.target.value,
-  //     // isError: false,
-  //     // errorMsg: ''
-  //   })
-  // }
-
   return (
     <>
       <div className="createform">
-      <h1>add</h1>
+      <h1>Add a resource</h1>
       <form className={classes.root} noValidate autoComplete="off"
         onSubmit={(event) => {
           event.preventDefault();

@@ -84,7 +84,7 @@ class SignIn extends React.Component {
           <br />
           <button type="submit">Sign In</button>
           <h3>New here?  
-          <Route path="/auth/login" component={SignUp}>
+          <Route path="/auth/login" render={(props) => <SignUp {...props}  />}>
               <Link to="/auth/login">Sign up with us</Link>
             </Route>
           </h3>

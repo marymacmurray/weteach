@@ -9,7 +9,7 @@ import CategoriesIndex from './components/CategoriesIndex';
 import Home from './components/Home'
 import SignIn from './components/SignIn';
 import SignUp from './components/Signup';
-// import EnsureLoggedInContainer from './components/EnsureLoggedInContainer'
+
 
 
 class App extends React.Component {
@@ -89,7 +89,7 @@ class App extends React.Component {
               user={this.state.user}
               resources={this.state.resources} />)}/>
           <Route path='/auth/login' render={(props) => (
-            !this.state.user && !localStorage.getItem('authToken') ? 
+            !this.state.user ? 
               (<SignUp {...props} setUser={this.setUser} />) :
             (<SignIn {...props} setUser={this.setUser} />)
           )} />
@@ -114,7 +114,6 @@ class App extends React.Component {
             />
           )}
           />
-          {/* <Route path='/categories/:category_id/resources/:id' component={AddCategorytoResource}/> */}
         </div>
       </Layout>
     );

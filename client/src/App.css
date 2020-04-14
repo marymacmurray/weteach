@@ -1,18 +1,18 @@
+
 .createform{
   margin-top: 10%;
   text-align: center;
-
+  
 }
 
 .signup{
+  font-family: 'Roboto', sans-serif;
   text-align: center;
-  margin-top: 10%;
+  padding: 1.5rem;
 }
 .signupform{
   font-size: large;
-}
-.signupform.input{
-  width: 10%;
+  text-align: center;
 }
 
 .MuiCardActions-root{

@@ -1,12 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-// import { Redirect } from "react-router-dom";
-import { browserHistory } from 'react-router';
 import Button from '@material-ui/core/Button';
-import { Redirect } from 'react-router-dom'
-import CreateResource from '../components/CreateResource'
-import { readOneResouce, updateResource } from '../services/api-helper'
 
 
 

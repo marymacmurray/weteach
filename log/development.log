@@ -30862,3 +30862,1449 @@ Processing by AuthenticationController#verify as HTML
 Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 814)
 
 
+Started GET "/resources" for ::1 at 2020-04-13 15:07:25 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:07:25 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:07:25 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (8.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 8.1ms | Allocations: 3340)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 2.7ms | Allocations: 4140)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 902)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:07:41 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:07:41 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:07:41 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (2.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.3ms | Allocations: 2531)
+
+
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 2.9ms | Allocations: 3830)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 3844)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:07:47 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:07:47 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:07:47 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 2.3ms | Allocations: 1443)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (22.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 2.2ms | ActiveRecord: 22.0ms | Allocations: 1927)
+
+
+  [1m[36mUser Load (27.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 30ms (Views: 0.4ms | ActiveRecord: 27.6ms | Allocations: 2301)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:07:50 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:07:50 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:07:50 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 3.3ms | Allocations: 2585)
+
+
+  [1m[36mCategory Load (8.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 14ms (Views: 4.5ms | ActiveRecord: 8.8ms | Allocations: 3921)
+
+
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 6.1ms | Allocations: 3017)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:04 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:04 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:04 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (44.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 48ms (Views: 3.3ms | ActiveRecord: 44.5ms | Allocations: 1442)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (27.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 2.9ms | ActiveRecord: 27.1ms | Allocations: 1305)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 814)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:06 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:06 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:06 -0400
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (1.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1388)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.9ms | Allocations: 3037)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:08 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:08 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:08 -0400
+Processing by ResourcesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (21.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 24ms (Views: 2.4ms | ActiveRecord: 21.2ms | Allocations: 2573)
+
+
+  [1m[36mCategory Load (10.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (26.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 3.9ms | ActiveRecord: 10.5ms | Allocations: 3340)
+
+
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 26.7ms | Allocations: 4187)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:09 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:09 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:09 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 1442)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (14.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 2.9ms | ActiveRecord: 14.8ms | Allocations: 1305)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 814)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:16 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:16 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:16 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.0ms | Allocations: 1442)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 814)
+
+
+  [1m[36mCategory Load (18.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 3.5ms | ActiveRecord: 18.1ms | Allocations: 2806)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:31 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:31 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:31 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (8.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 8.6ms | Allocations: 1726)
+
+
+  [1m[36mResource Load (16.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 4.2ms | ActiveRecord: 16.4ms | Allocations: 4028)
+
+
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 6.9ms | Allocations: 2618)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:33 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:33 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:33 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (13.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 3.4ms | ActiveRecord: 13.4ms | Allocations: 1442)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 2.5ms | Allocations: 1895)
+
+
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 10.9ms | Allocations: 2246)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:08:37 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:08:37 -0400
+Started GET "/auth/verify" for ::1 at 2020-04-13 15:08:37 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mResource Load (91.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (55.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (54.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+Completed 200 OK in 115ms (Views: 23.5ms | ActiveRecord: 91.4ms | Allocations: 2642)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 64ms (Views: 8.8ms | ActiveRecord: 55.2ms | Allocations: 3450)
+
+
+Completed 200 OK in 65ms (Views: 0.3ms | ActiveRecord: 54.1ms | Allocations: 3649)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:09:01 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:09:01 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 2.1ms | Allocations: 1870)
+
+
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 1520)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:09:45 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:09:45 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (25.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 3.2ms | ActiveRecord: 25.3ms | Allocations: 1735)
+
+
+  [1m[36mResource Load (27.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 30ms (Views: 2.8ms | ActiveRecord: 27.0ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:09:51 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:09:51 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.4ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (25.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 2.9ms | ActiveRecord: 25.8ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:09:54 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:09:54 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1417)
+
+
+  [1m[36mResource Load (3.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 3.5ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:10:00 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:10:00 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (6.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.4ms | ActiveRecord: 6.2ms | Allocations: 1981)
+
+
+  [1m[36mCategory Load (8.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 8.2ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:12:06 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:12:06 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (3.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 3.4ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (10.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 2.2ms | ActiveRecord: 10.2ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:12:55 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:12:55 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1417)
+
+
+  [1m[36mResource Load (2.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 2.3ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:13:06 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:13:06 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (58.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 63ms (Views: 4.0ms | ActiveRecord: 58.6ms | Allocations: 1982)
+
+
+  [1m[36mCategory Load (95.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 100ms (Views: 3.3ms | ActiveRecord: 95.9ms | Allocations: 2898)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:13:53 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:13:53 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (7.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.4ms | ActiveRecord: 7.0ms | Allocations: 1305)
+
+
+  [1m[36mResource Load (21.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 25ms (Views: 3.2ms | ActiveRecord: 21.3ms | Allocations: 3436)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:15:25 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:15:25 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (6.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.8ms | Allocations: 2071)
+
+
+Completed 200 OK in 10ms (Views: 4.1ms | ActiveRecord: 6.0ms | Allocations: 3211)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:15:33 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:15:33 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.7ms | Allocations: 1442)
+
+
+  [1m[36mCategory Load (7.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 7.7ms | Allocations: 3426)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:17:12 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:17:12 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (59.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (57.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 66ms (Views: 6.1ms | ActiveRecord: 59.3ms | Allocations: 2407)
+
+
+Completed 200 OK in 65ms (Views: 7.2ms | ActiveRecord: 57.3ms | Allocations: 2777)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:18:49 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:18:49 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1935)
+
+
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.7ms | Allocations: 3214)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:18:53 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:18:53 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (3.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.5ms | Allocations: 1417)
+
+
+  [1m[36mResource Load (6.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 6.5ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:18 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Started GET "/categories" for ::1 at 2020-04-13 15:19:18 -0400
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 2318)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:20 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:20 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 2682)
+
+
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.1ms | Allocations: 2183)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:38 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:38 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1576)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.5ms | Allocations: 2839)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:39 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:39 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.8ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.3ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:47 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:47 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms | Allocations: 1327)
+
+
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 2.9ms | Allocations: 2794)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:52 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:52 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (8.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (6.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 8.3ms | Allocations: 2435)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 6.7ms | Allocations: 2718)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:19:57 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:19:57 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 1327)
+
+
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 2.4ms | Allocations: 2775)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:20:02 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:20:02 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (7.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.9ms | ActiveRecord: 7.3ms | Allocations: 1333)
+
+
+  [1m[36mResource Load (9.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 17ms (Views: 6.3ms | ActiveRecord: 9.9ms | Allocations: 3218)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:22:55 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:22:55 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.1ms | Allocations: 1971)
+
+
+  [1m[36mCategory Load (3.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 3.3ms | Allocations: 2875)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:22:56 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:22:56 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (4.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 2.6ms | ActiveRecord: 4.5ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:23:26 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:23:26 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms | Allocations: 2046)
+
+
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 2682)
+
+
+Started GET "/categories" for ::1 at 2020-04-13 15:23:44 -0400
+Started GET "/resources" for ::1 at 2020-04-13 15:23:44 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (8.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (9.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 8.4ms | Allocations: 2137)
+
+
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 9.2ms | Allocations: 3208)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:23:48 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:23:48 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms | Allocations: 1443)
+
+
+  [1m[36mCategory Load (6.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 3.3ms | ActiveRecord: 6.4ms | Allocations: 3417)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:23:55 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:23:55 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (3.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1327)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 3.1ms | Allocations: 3426)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:24:26 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:24:26 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (4.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.4ms | Allocations: 2294)
+
+
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 4.7ms | Allocations: 3008)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:25:09 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:25:09 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 1993)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.1ms | Allocations: 2869)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:25:25 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:25:25 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (2.8ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.6ms | Allocations: 1439)
+
+
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.8ms | Allocations: 2682)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:26:07 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:26:07 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.7ms | Allocations: 1417)
+
+
+  [1m[36mResource Load (4.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 4.5ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:30:42 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:30:42 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (3.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.7ms | Allocations: 1454)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (7.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 3.7ms | ActiveRecord: 7.0ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:31:03 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:31:03 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.1ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (11.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 2.0ms | ActiveRecord: 11.2ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:32:05 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:32:05 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (42.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 2.9ms | ActiveRecord: 42.7ms | Allocations: 1834)
+
+
+  [1m[36mResource Load (46.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 50ms (Views: 3.5ms | ActiveRecord: 46.1ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:32:08 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:32:08 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 1981)
+
+
+  [1m[36mCategory Load (11.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 2.3ms | ActiveRecord: 11.5ms | Allocations: 2869)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:32:58 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:32:58 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1305)
+
+
+  [1m[36mResource Load (3.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 3.3ms | Allocations: 3009)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:36:43 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:36:43 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (20.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 2.5ms | ActiveRecord: 20.8ms | Allocations: 1834)
+
+
+  [1m[36mResource Load (38.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 42ms (Views: 3.1ms | ActiveRecord: 38.4ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:36:46 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:36:46 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 1443)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 3.1ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:37:45 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:37:45 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+  [1m[36mCategory Load (8.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 8.8ms | Allocations: 3009)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:37:49 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:37:49 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (2.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1934)
+
+
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 2.6ms | Allocations: 3221)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:37:53 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:37:53 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (9.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 9.6ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (14.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 14.3ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:38:41 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-13 15:38:41 -0400
+  [1m[36mResource Load (2.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Processing by CategoriesController#index as HTML
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 2.0ms | Allocations: 2905)
+
+
+  [1m[36mCategory Load (2.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 2.3ms | Allocations: 2268)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:42:34 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-13 15:42:34 -0400
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1538)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:45:37 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:45:37 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1305)
+
+
+  [1m[36mResource Load (25.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 3.0ms | ActiveRecord: 25.1ms | Allocations: 3436)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:45:41 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:45:41 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.0ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (3.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 3.7ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:45:52 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:45:52 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.4ms | Allocations: 1442)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:45:56 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:45:56 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.3ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (14.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 2.5ms | ActiveRecord: 14.6ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:47:21 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:47:21 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1438)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.3ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:47:23 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:47:23 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 1929)
+
+
+  [1m[36mCategory Load (17.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 6.5ms | ActiveRecord: 17.5ms | Allocations: 2204)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 15:47:50 -0400
+Started GET "/categories" for ::1 at 2020-04-13 15:47:50 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (1.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 1.9ms | Allocations: 1985)
+
+
+  [1m[36mCategory Load (23.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 3.5ms | ActiveRecord: 23.0ms | Allocations: 2189)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 16:36:59 -0400
+Started GET "/categories" for ::1 at 2020-04-13 16:36:59 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.6ms | Allocations: 2161)
+
+
+  [1m[36mCategory Load (2.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 2.9ms | Allocations: 2987)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 16:37:03 -0400
+Started GET "/categories" for ::1 at 2020-04-13 16:37:03 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 2183)
+
+
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 2682)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 16:37:08 -0400
+Started GET "/categories" for ::1 at 2020-04-13 16:37:08 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (1.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1934)
+
+
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.1ms | Allocations: 2794)
+
+
+Started GET "/resources" for ::1 at 2020-04-13 16:38:34 -0400
+Started GET "/categories" for ::1 at 2020-04-13 16:38:34 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (6.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 2.0ms | Allocations: 1934)
+
+
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 6.3ms | Allocations: 3221)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:05:06 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:05:06 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (3.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 1384)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 3.2ms | Allocations: 3067)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:06:59 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:06:59 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (2.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (3.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 2.5ms | Allocations: 1774)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.8ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:07:08 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:07:08 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.9ms | Allocations: 1306)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1442)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:08:12 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:08:12 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 1.4ms | Allocations: 2778)
+
+
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms | Allocations: 1935)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:08:33 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:08:33 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1557)
+
+
+  [1m[36mCategory Load (2.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 2.5ms | Allocations: 2900)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:27:24 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:27:24 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.6ms | Allocations: 2650)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (2.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.2ms | Allocations: 1500)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:29:56 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:29:56 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1575)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.9ms | Allocations: 2839)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:30:01 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:30:01 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.6ms | Allocations: 1305)
+
+
+  [1m[36mResource Load (6.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 3.9ms | ActiveRecord: 6.5ms | Allocations: 3215)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:30:03 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:30:03 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (5.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (5.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 3.0ms | ActiveRecord: 5.6ms | Allocations: 2189)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 5.2ms | Allocations: 2839)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:30:36 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:30:36 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.2ms | Allocations: 1934)
+
+
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.6ms | Allocations: 2800)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:30:37 -0400
+Started GET "/categories" for ::1 at 2020-04-14 08:30:37 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.0ms | Allocations: 1305)
+
+
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (28.4ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 33ms (Views: 4.3ms | ActiveRecord: 28.4ms | Allocations: 1442)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 08:31:57 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-14 08:31:57 -0400
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1698)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:26:38 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:26:38 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  [1m[36mResource Load (1.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 1508)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.5ms | Allocations: 2953)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:09 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:27:09 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (7.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 11ms (Views: 3.8ms | ActiveRecord: 7.1ms | Allocations: 1981)
+
+
+  [1m[36mCategory Load (17.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 5.4ms | ActiveRecord: 17.9ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:12 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:27:12 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (6.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (7.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 6.7ms | Allocations: 1934)
+
+
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 7.7ms | Allocations: 2794)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:17 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:27:17 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (30.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 34ms (Views: 3.3ms | ActiveRecord: 30.7ms | Allocations: 1834)
+
+
+  [1m[36mResource Load (27.1ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 31ms (Views: 3.1ms | ActiveRecord: 27.1ms | Allocations: 2897)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-14 10:27:31 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"vvvvvCreating Zoom Breakout Rooms", "link"=>"https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4", "description"=>"Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."}, "id"=>"1"}
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mResource Update (6.9ms)[0m  [1m[33mUPDATE "resources" SET "name" = $1, "updated_at" = $2 WHERE "resources"."id" = $3[0m  [["name", "vvvvvCreating Zoom Breakout Rooms"], ["updated_at", "2020-04-14 14:27:31.129339"], ["id", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 14.7ms | Allocations: 4311)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:31 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+Started PUT "/resources/1" for ::1 at 2020-04-14 10:27:38 -0400
+Processing by ResourcesController#update as HTML
+  Parameters: {"resource"=>{"name"=>"Creating Zoom Breakout Rooms", "link"=>"https://support.zoom.us/hc/en-us/articles/360032752671-Pre-assigning-participants-to-breakout-rooms#h_36f71353-4190-48a2-b999-ca129861c1f4", "description"=>"Use zoom breakout rooms to form het/homogenous groupings.  Check in with your groups by stopping into breakout rooms."}, "id"=>"1"}
+  [1m[36mResource Load (0.2ms)[0m  [1m[34mSELECT "resources".* FROM "resources" WHERE "resources"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:45:in `set_resource'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[36mResource Update (0.6ms)[0m  [1m[33mUPDATE "resources" SET "name" = $1, "updated_at" = $2 WHERE "resources"."id" = $3[0m  [["name", "Creating Zoom Breakout Rooms"], ["updated_at", "2020-04-14 14:27:38.105135"], ["id", 1]]
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/resources_controller.rb:30:in `update'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 7.5ms | Allocations: 4275)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:38 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:48 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.6ms | Allocations: 1452)
+
+
+Started GET "/categories" for ::1 at 2020-04-14 10:27:48 -0400
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 3.6ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:27:54 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:27:54 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (16.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 21ms (Views: 4.1ms | ActiveRecord: 16.7ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (49.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 3.3ms | ActiveRecord: 49.0ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:28:09 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:28:09 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 1443)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:28:23 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:28:23 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (1.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 2183)
+
+
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.1ms | Allocations: 2682)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:28:30 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:28:30 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms | Allocations: 1554)
+
+
+  [1m[36mCategory Load (14.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 2.2ms | ActiveRecord: 14.9ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:28:45 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:28:45 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (0.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1934)
+
+
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.9ms | Allocations: 2794)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:28:57 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:28:57 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.3ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Processing by CategoriesController#index as HTML
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1864)
+
+
+  [1m[36mCategory Load (12.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 12.0ms | Allocations: 1520)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:29:19 -0400
+Processing by ResourcesController#index as HTML
+Started GET "/categories" for ::1 at 2020-04-14 10:29:19 -0400
+  [1m[36mResource Load (0.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 1688)
+
+
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 1305)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:29:24 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:29:24 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1575)
+
+
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2897)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:30:23 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:30:23 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 2183)
+
+
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 2682)
+
+
+Started GET "/resources" for ::1 at 2020-04-14 10:33:37 -0400
+Started GET "/categories" for ::1 at 2020-04-14 10:33:37 -0400
+Processing by CategoriesController#index as HTML
+Processing by ResourcesController#index as HTML
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mResource Load (0.6ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 1.0ms | Allocations: 2046)
+
+
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 2897)
+
+

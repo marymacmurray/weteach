@@ -17,8 +17,6 @@ class SignUp extends React.Component {
   handleChange = event =>
     this.setState({
       [event.target.name]: event.target.value,
-      // isError: false,
-      // errorMsg: ''
     })
 
   onSignUp = async (event) => {
@@ -37,18 +35,6 @@ class SignUp extends React.Component {
       }
   }
 
-  // renderError = () => {
-  //   const toggleForm = this.state.isError ? 'danger' : ''
-  //   if (this.state.isError) {
-  //     return (
-  //       <button type="submit" className={toggleForm}>
-  //         {this.state.errorMsg}
-  //       </button>
-  //     )
-  //   } else {
-  //     return <button type="submit">Sign In</button>
-  //   }
-  // }
 
   render() {
     const { email, username, password } = this.state
@@ -57,9 +43,9 @@ class SignUp extends React.Component {
       <div className="signup">
         <h2>Welcome</h2>
         <form className="signupform" onSubmit={this.onSignUp}>
-          <label>Username</label>
+          <label>username</label>
           <div>
-            <input
+            <input className="login-input"
               required
               type="text"
               name="username"
@@ -69,9 +55,9 @@ class SignUp extends React.Component {
             />
           </div>
           <br />
-          <label>Email address</label>
+          <label>email address</label>
           <div>
-            <input
+            <input className="login-input"
               required
               type="email"
               name="email"
@@ -81,9 +67,9 @@ class SignUp extends React.Component {
             />
           </div>
           <br />
-          <label>Password</label>
+          <label>password</label>
           <div>
-            <input
+            <input className="login-input"
               required
               name="password"
               value={password}
@@ -94,12 +80,11 @@ class SignUp extends React.Component {
           </div>
           <br />
           <button type="submit">Sign Up</button>
-          <h3>Already registered?  
+          <h4>Already registered?  
           <Route path="/auth/login" render={(props) => <SignIn {...props}/>}>
-              <Link to="/auth/login">Sign in</Link>
+              <Link to="/auth/login"> Sign in</Link>
             </Route>
-            </h3>
-          {/* {this.renderError()} */}
+            </h4>
         </form>
       </div>
     )

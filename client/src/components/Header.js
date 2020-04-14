@@ -8,10 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { Link } from "react-router-dom"
-import { MemoryRouter as Router } from 'react-router';
-import { signOut } from '../services/api-helper';
+
 
 
 const useStyles = makeStyles((theme) => ({

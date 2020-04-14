@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from "react-router-dom"
-import { destroyResource, verifyUser } from '../services/api-helper'
+import { destroyResource} from '../services/api-helper'
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -47,7 +47,6 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// const resources = {props.resources}
 
 export default function Home(props) {
   const classes = useStyles();
