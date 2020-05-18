@@ -76,7 +76,7 @@ class App extends React.Component {
   }
 
   setUser = user => this.setState({ user });
-  clearUser = () => this.setState({ user: null });
+  clearUser = () => { this.setState({ user: null }); localStorage.setItem('authToken', '') };
   // ====================================
   // ============= Render ===============
   // ====================================

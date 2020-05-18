@@ -37798,3 +37798,46 @@ Processing by ResourcesController#index as HTML
 Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms | Allocations: 2457)
 
 
+Started GET "/" for ::1 at 2020-05-18 16:48:41 -0400
+  [1m[35m (13.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/macbook/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/macbook/.rbenv/versions/2.6.4/lib/ruby/gems/2.6.0/gems/railties-6.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.7ms | Allocations: 309)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms | Allocations: 1620)
+
+
+Started GET "/resources" for ::1 at 2020-05-18 16:49:03 -0400
+Started GET "/categories" for ::1 at 2020-05-18 16:49:03 -0400
+Started GET "/auth/verify" for ::1 at 2020-05-18 16:49:03 -0400
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (5.9ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 120ms (Views: 18.5ms | ActiveRecord: 78.1ms | Allocations: 14252)
+
+
+Processing by CategoriesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCategory Load (1.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 9.5ms | ActiveRecord: 13.9ms | Allocations: 7145)
+
+
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 48ms (Views: 0.3ms | ActiveRecord: 17.2ms | Allocations: 10425)
+
+
+Started GET "/resources" for ::1 at 2020-05-18 16:49:43 -0400
+Started GET "/categories" for ::1 at 2020-05-18 16:49:43 -0400
+Processing by ResourcesController#index as HTML
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (3.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 3.4ms | Allocations: 1345)
+
+
+  [1m[36mResource Load (5.7ms)[0m  [1m[34mSELECT "resources".* FROM "resources"[0m
+  ↳ app/controllers/resources_controller.rb:9:in `index'
+Completed 200 OK in 15ms (Views: 8.5ms | ActiveRecord: 5.7ms | Allocations: 4070)
+
+
