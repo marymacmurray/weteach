@@ -52,6 +52,12 @@ export const readOneResource = async (id) => {
   return resp.data;
 }
 
+export const getAllResourcesByUserId = async (userId) => {
+  const res = await api.get(`/users/${userId}/resources`)
+  console.log(res.data);
+  return res.data;
+}
+
 export const createResource = async (resourceData, id) => {
   const formdata = resourceData
   formdata.user_id = id

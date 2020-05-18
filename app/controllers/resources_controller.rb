@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :update, :destroy]
-  # before_action :authorize_request, only: [:create, :update, :destroy, :add_flavor]
+  # before_action :authorize_request, only: [:create, :update, :destroy, :add_category]
   
   # GET /resources
   def index
@@ -13,6 +13,8 @@ class ResourcesController < ApplicationController
   def show
     render json: @resource
   end
+
+
 
   # POST /resources
   def create
@@ -37,6 +39,17 @@ class ResourcesController < ApplicationController
   # DELETE /resources/1
   def destroy
     @resource.destroy
+  end
+
+  def add_category
+    @category = Category.find(params[:category_id])
+    @resource.categories << @category
+    render json: @resource, include: :categories
+  end
+
+  def users_resources
+    @resources = Resource.where(user_id:params[:user_id])
+    render json: @resources, include: :categories
   end
 
   private

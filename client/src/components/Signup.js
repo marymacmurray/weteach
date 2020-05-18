@@ -10,7 +10,9 @@ class SignUp extends React.Component {
     this.state = {
       username: '',
       email: '',
-      password: ''
+      password: '',
+      isError: false,
+      errorMsg:''
     }
   }
 
@@ -22,16 +24,21 @@ class SignUp extends React.Component {
   onSignUp = async (event) => {
     event.preventDefault()
 
-    const { setUser, history } = this.props
+    const { setUser, getUsersResources, history } = this.props
     try
     {
-    await registerUser(this.state)
-    const user = await loginUser(this.state)
-    await setUser(user)  //set the user in App.js
-    await history.push('/')
+      await registerUser(this.state)
+      const user = await loginUser(this.state)
+      await setUser(user)  //set the user in App.js
+      await history.push('/')
     }
       catch(error){
-        console.error(error)
+      console.error(error)      
+      this.setState(
+        {
+          isError: true,
+          errorMsg: `${error.response.status}`
+        })
       }
   }
 

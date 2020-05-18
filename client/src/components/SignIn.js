@@ -24,13 +24,14 @@ class SignIn extends React.Component {
   onSignIn = async (event) => {
     event.preventDefault()
 
-    const { setUser, history } = this.props
+    const { setUser, getUsersResources, history } = this.props
     try
     {
       const {username,password} = this.state
       const user = await loginUser({ username,password })
-    await setUser(user)  //set the user in App.js
-    await history.push('/')
+      await setUser(user)  //set the user in App.js
+      await getUsersResources(this.props.user.id)
+      await history.push('/')
     }
       catch(error){
         console.error(error)
@@ -84,8 +85,8 @@ class SignIn extends React.Component {
           <br />
           <button type="submit">Sign In</button>
           <h3>New here?  
-          <Route path="/auth/login" render={(props) => <SignUp {...props}  />}>
-              <Link to="/auth/login">Sign up with us</Link>
+          <Route path="/auth/signup" render={(props) => <SignUp {...props}  />}>
+              <Link to="/auth/signup">Sign up with us</Link>
             </Route>
           </h3>
         </form>

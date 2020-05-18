@@ -45,8 +45,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 
 export default function Home(props) {
   const classes = useStyles();
@@ -68,9 +66,9 @@ export default function Home(props) {
               <Grid container spacing={2} justify="center">
                 <Grid item>
 
-                  {props.user ? <Button component={Link} to="/" onClick={() => {{props.clearUser()}}} variant="contained" color="primary" color="inherit">Logout</Button>
+                  {props.user ? <Button component={Link} to="/" onClick={() => {props.clearUser()}} variant="contained" color="inherit">Logout</Button>
                     :
-                    <Button component={Link} to="/auth/login" variant="contained" color="primary">Sign Up</Button>
+                    <Button component={Link} to="/auth/signup" variant="contained" color="primary">Sign Up</Button>
                   }
 
                 </Grid>

@@ -21,8 +21,7 @@ class ResourcesIndex extends React.Component {
 
   setEdit = async(id) => {
     const allResources = this.props.resources
-    const oneResource = await allResources.find(resource => resource.id == id)
-    console.log(oneResource)
+    const oneResource = await allResources.find(resource => resource.id === id)
     this.setState({
       formData: {
         name: oneResource.name,

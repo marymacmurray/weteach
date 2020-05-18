@@ -49,8 +49,8 @@ export default function ButtonAppBar(props) {
             onClose={handleClose}
           >
             <MenuItem component={Link} to="/">Home</MenuItem>
-            <MenuItem component={Link} to="/auth/login">Signup</MenuItem>
-            <MenuItem component={Link} to="/resources">Resources</MenuItem>
+            {props.user ? <MenuItem component={Link} to={`/users/${props.user.id}/resources`}>My Resources</MenuItem>: <MenuItem component={Link} to="/auth/login">Signin</MenuItem>}
+            {props.user ? <MenuItem component={Link} to="/resources">Resources</MenuItem> : <MenuItem component={Link} to="/auth/signup">Signup</MenuItem>}
           </Menu>
           <Typography variant="h6" className={classes.title}>
           {props.user ? <span>Welcome, {props.user.username}</span> : <span>We Teach</span>}
@@ -58,7 +58,7 @@ export default function ButtonAppBar(props) {
           <Typography variant="inherit">
           </Typography>
           <Button component={Link} to="/" color="inherit">Home</Button>
-          <Button component={Link} to="/" onClick={() => {{props.clearUser()}}} color="inherit">Logout</Button>
+          <Button component={Link} to="/" onClick={() => {props.clearUser()}} color="inherit">Logout</Button>
 
         </Toolbar>
       </AppBar>
