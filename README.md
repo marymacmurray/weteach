@@ -7,14 +7,14 @@ we_teach is an app for online educators to teach and learn from one another.  Us
 *This is phase 1 of a larger collaboration project with a group of NYC public school teachers to create multiple products with one purpose:  Creating, sharing, and iterating on our online pedagogical practices within a supportive community of teachers and learners.
 
 ### Must have
-* User auth
-* Unified styling ([React Material UI](https://material-ui.com/getting-started/installation/ "material UI"))
-* Full CRUD operation for the teaching resources table. 
+* Users must be able to login and create an account (user authentication).
+* Unified styling (We will use a popular React UI framework that implements Google's Material Design principles  [React Material UI](https://material-ui.com/getting-started/installation/ "material UI"))
+* Capability to create, read, update, and delete teaching resources (full CRUD database operations initiated on the front end, with notifications when data validations fail, and successfull updates to the database of the API when data validations pass). 
+* Previews of resources
 
 ## 🌟 Phase 1 Post-MVP
 
 ### Should have 
-* Previews of resources
 * Read operations for the pedagogical categories table. 
 ### Could have
 * A first-time site visitor experience
@@ -46,7 +46,7 @@ App.js
 
 | Function | Description |
 | :---: | :---: | 
-| createResource | creates resource with user_id reference in db by gathering user input and current user data from frontend| 
+| createResource | creates resource with user_id reference in db by gathering user input and current user data from front end| 
 | login/verify/registerUser | various forms of touching base with the db and adding/confirming the token in user's local storage. | 
 
 
@@ -54,45 +54,48 @@ App.js
 ```
 const sortedResources = 
 resources.sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1);
-//this sorts the resources at mount and after all CRUD actions so the resources on the page are showing in abc 
-order by title at all times.
+//Front end algorithm in the Parent component that receives all data from the API back end.  
+This algo sorts the resources at mount and after all CRUD actions so the resources 
+on the page are showing in abc order by title at all times.
 ```
 ```
 def password_complexity
     return if password.blank? || password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!#'@%$&-])/
 
     errors.add :password, "Complexity requirement not met. Please use at least: 1 uppercase, 1 lowercase, 1 digit and 1 special character(!#'@%$&-)"
-  end
-  # Password complexity check on the backend.  Regexp extracted from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
+end
+  # Password complexity validation on the the back end before it hits the database during user signup/signin.  
+    Regexp extracted from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
 ```
 ### ✔️ Issues and Resolutions
 
-* Issue: Frontend: Using MUI props in a form alongside passing data between components without class components and state.  Resolution was switching React components that needed MUI props to function components and using a services component to pass all API data to the App component, keeping state "lifted".
+* Issue: Front end: Using MUI props in a form alongside passing data between components without class components and state.  Resolution was switching React components that needed MUI props to function components and using a services component to pass all API data to the App component, keeping state "lifted".
 
 ### 📦 Technologies used:
 
-FrontEnd:
+* Front end (Node)
+  * Languages: JavaScript ES6, HTML5, CSS3
+  * Frameworks: Materiaul-UI
+  * Libraries: React
+  * Deployment: Surge
 
-- react js
-- react router dom
-- js, html, css
-- react material-ui
-- flexbox and grid
+* Back end (Ruby)
+  * Languages: Ruby, SQL
+  * Frameworks: Ruby on Rails
+  * Database: PostgreSQL
+  * Deployment: Github and Heroku
+  * Password hashing: Bcrypt
+  * Token: JWT
+  * Secure cross-origin requests and data transfers: CORS
 
-Backend:
 
-- bcrypt
-- jwt
-- cors
-
-Testing:
-
-- byebug + pry
-- pretty print
+* Version Control: Git
+* Methodologies: MVC, REST, AJAX, JSON 
+* Testing tools: Byebug + pry, Pretty print
 
 <br></br>
 
-### 👩‍💻 Steps to get your backend up and running: 
+### 👩‍💻 Steps to get your back end up and running: 
 
 * Ruby version: ruby 2.6.4
 
@@ -113,11 +116,11 @@ Testing:
 * How to run the test suite (there is currently no test suite for this app)
 
 * Deployment instructions
-  1. <b>Backend</b>: Normal heroku deployment, except that there is an environment variable used for securing the authentication with a secret key, check out  `application_controller.rb` to see that.  
-  2. <b>Frontend:</b>  See more info below.  Normal surge deployment, except that react routing uses 200.html instead of index.html.
+  1. <b>Back end</b>: Normal heroku deployment, except that there is an environment variable used for securing the authentication with a secret key, check out  `application_controller.rb` to see that.  
+  2. <b>Front end:</b>  See more info below.  Normal surge deployment, except that react routing uses 200.html instead of index.html.
 
 
-### ✏️ Steps to get your frontend up and running 
+### ✏️ Steps to get your front end up and running 
 
 In the client directory, you can run:
 
