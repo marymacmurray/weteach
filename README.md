@@ -67,7 +67,7 @@ def password_complexity
 ```
 ### ✔️ Issues and Resolutions
 
-* Using MUI props in a form in conjunction with other components.  Resolution was switching components that needed MUI props to function components and keeping state lifted to the top-most component and passing down as props.
+* Issue: Frontend: Using MUI props in a form alongside passing data between components without class components and state.  Resolution was switching React components that needed MUI props to function components and using a services component to pass all API data to the App component, keeping state "lifted".
 
 ### 📦 Technologies used:
 
