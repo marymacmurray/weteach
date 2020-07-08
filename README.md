@@ -79,7 +79,7 @@ end
   * Libraries: React
   * Deployment: Surge
 
-* Back end (Ruby)
+* Back end (Rails)
   * Languages: Ruby, SQL
   * Frameworks: Ruby on Rails
   * Database: PostgreSQL
